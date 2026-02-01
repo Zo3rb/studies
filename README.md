@@ -1,10 +1,10 @@
-# 📌 Zo3rb's 2025 Learning Journey 🚀
+# 📌 Zo3rb's Learning Journey 🚀
 
 ## 📖 About This Repository
 
-Welcome to my **2025 Learning Journey** repository! As a former software engineer transitioning into **DevOps**, this space serves as my **digital notebook**—tracking my studies, projects, and hands-on experience. My goal is to bridge the gap between **software development** and **DevOps engineering**, gaining **real-world expertise** in the latest technologies.
+Welcome to my **Learning Journey** repository! As a former software engineer transitioning into **DevOps**, this space serves as my **digital notebook**—tracking my studies, projects, and hands-on experience. My goal is to bridge the gap between **software development** and **DevOps engineering**, gaining **real-world expertise** in the latest technologies.
 
-## 🎯 Goals for 2025
+## 🎯 Goals:
 
 - Master **DevOps Tools & Practices** (Jenkins, Docker, Kubernetes, Terraform, Ansible, etc.).
 - Enhance **Problem-Solving Skills** via **LeetCode & DSA**.
