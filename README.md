@@ -1,54 +1,35 @@
-# 📌 Zo3rb's Learning Journey 🚀
+# 📌 Zo3rb's Learning & AI/ML Engineering Journey 🚀
 
 ## 📖 About This Repository
 
-Welcome to my **Learning Journey** repository! As a former software engineer transitioning into **DevOps**, this space serves as my **digital notebook**—tracking my studies, projects, and hands-on experience. My goal is to bridge the gap between **software development** and **DevOps engineering**, gaining **real-world expertise** in the latest technologies.
-
-## 🎯 Goals:
-
-- Master **DevOps Tools & Practices** (Jenkins, Docker, Kubernetes, Terraform, Ansible, etc.).
-- Enhance **Problem-Solving Skills** via **LeetCode & DSA**.
-- Deepen expertise in **Python, Node.js, SQL, and Bash**.
-- Build & deploy real-world **MERN, Flask, Django, and WebSocket** projects.
-- Automate & optimize development workflows.
-- Document & share everything I learn! 📝
-
-## 🛠️ Tech Stack & Tools
-
-### **Programming Languages:**
-
-### **DevOps & Cloud:**
-
-## 📊 Learning Progress
-
-**Topic**
-
-**Status**
-
-📌 **DSA & LeetCode**
-
-In Progress 🚀
-
-🔄 **Python & JS Revision**
-
-Ongoing 📝
-
-⚙️ **DevOps (Jenkins, Docker, etc.)**
-
-In Progress 🏗️
-
-🏗️ **Building Projects**
-
-Coming Soon 🔜
-
-## 🚀 Featured Projects
-
-- 🏗 **Bash Scripting Playground** – Hands-on automation and scripting challenges.
-- 📦 **Containerized Web App** – Deploying a full-stack app with **Docker & Kubernetes**.
-- 🔥 **CI/CD Pipeline Setup** – Implementing an end-to-end DevOps pipeline with **Jenkins & Terraform**.
-
-## 📬 Connect With Me
+Welcome to my **Learning Journey** repository! As a software engineer leveraging into **AI/ML Engineering** and **DevOps**, this space serves as my digital notebook—tracking my hands-on studies, database architectures, algorithmic problem-solving, and production-ready projects.
 
 ---
 
-📌 _This repository will evolve as I progress through my journey—stay tuned!_ 🚀
+## 🎯 Primary Goals & Roadmap
+
+- 🗄️ **Database Engineering (PostgreSQL & SQL):** Deep dive into PostgreSQL data types, schema design, constraints, indexing, query execution plans, and vector search (`pgvector`).
+- 🤖 **AI/ML Engineering:** Master Python Data Science libraries (NumPy, Pandas, PyTorch), mathematical foundations (Linear Algebra, Calculus, Probability), and feature engineering.
+- ⚡ **Data Structures & Algorithms:** Solve problems systematically on LeetCode using Python & JavaScript.
+- ⚙️ **DevOps & Cloud Automation:** Docker, Kubernetes, CI/CD pipelines, and cloud database infrastructure.
+
+---
+
+## 📊 SQL & PostgreSQL Progress
+
+| Module | Description | Status |
+| :--- | :--- | :---: |
+| 🗂️ **[Module 1: Data Types](./PS_SQL/01-DataTypes/README.md)** | 16 Lessons: Numeric, Characters, Dates, UUIDs, Enums, Collations, Check Constraints | ✅ Complete |
+| ⚡ **[Module 2: Advanced Data Types](./PS_SQL/02-AdvancedDataTypes/README.md)** | 16 Lessons: Intervals, Sequences, Identity, JSON, Arrays, Ranges, Composite Types, FKs | ✅ Complete |
+
+---
+
+## 🛠️ Tech Stack & Tools
+
+- **Languages:** Python, JavaScript, TypeScript, SQL, Bash
+- **Databases:** PostgreSQL, DBeaver, Neon Cloud
+- **Tools & Frameworks:** Node.js, React, Git, Docker
+
+---
+
+📌 _This repository is continuously updated as I progress through my learning path—stay tuned!_ 🚀
