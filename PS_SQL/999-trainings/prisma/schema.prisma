@@ -23,12 +23,14 @@ model User {
   email        String    @unique @db.VarChar(255)
   passwordHash String    @map("password_hash") @db.VarChar(255)
   fullName     String?   @map("full_name") @db.VarChar(150)
+  avatarFileId Int?      @unique @map("avatar_file_id")
   isActive     Boolean   @default(true) @map("is_active")
   createdAt    DateTime  @default(now()) @map("created_at") @db.Timestamptz
   updatedAt    DateTime  @updatedAt @map("updated_at") @db.Timestamptz
   deletedAt    DateTime? @map("deleted_at") @db.Timestamptz
   language     String    @default("en") @db.VarChar(5)
 
+  avatarFile       UploadedFile?     @relation("UserAvatarFile", fields: [avatarFileId], references: [id], onDelete: SetNull)
   userRoles        UserRole[]
   enrollments      Enrollment[]
   courses          Course[]
@@ -39,8 +41,28 @@ model User {
   chatParticipants ChatParticipant[]
   emailCampaigns   EmailCampaign[]
   emailLogs        EmailLog[]
+  uploadedFiles    UploadedFile[]    @relation("UserUploadedFiles")
 
   @@map("users")
+}
+
+model UploadedFile {
+  id            Int       @id @default(autoincrement())
+  ownerUserId   Int       @map("owner_user_id")
+  originalName  String    @map("original_name") @db.VarChar(255)
+  storageKey    String    @unique @map("storage_key") @db.VarChar(500)
+  mimeType      String?   @map("mime_type") @db.VarChar(100)
+  fileSizeBytes BigInt?   @map("file_size_bytes")
+  checksum      String?   @db.VarChar(128)
+  isPublic      Boolean   @default(false) @map("is_public")
+  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt     DateTime  @updatedAt @map("updated_at") @db.Timestamptz
+  deletedAt     DateTime? @map("deleted_at") @db.Timestamptz
+
+  owner     User  @relation("UserUploadedFiles", fields: [ownerUserId], references: [id], onDelete: Cascade)
+  avatarFor User? @relation("UserAvatarFile")
+
+  @@map("uploaded_files")
 }
 
 model UserRole {
@@ -86,7 +108,7 @@ model Module {
   title        String    @db.VarChar(200)
   description  String?
   orderIndex   Int       @default(1) @map("order_index")
-  passingScore  Decimal  @default(70.00) @map("passing_score") @db.Decimal(5, 2)
+  passingScore Decimal   @default(70.00) @map("passing_score") @db.Decimal(5, 2)
   createdAt    DateTime  @default(now()) @map("created_at") @db.Timestamptz
   updatedAt    DateTime  @updatedAt @map("updated_at") @db.Timestamptz
   deletedAt    DateTime? @map("deleted_at") @db.Timestamptz
@@ -121,7 +143,7 @@ model Enrollment {
   courseId    Int       @map("course_id")
   enrolledAt  DateTime  @default(now()) @map("enrolled_at") @db.Timestamptz
   completedAt DateTime? @map("completed_at") @db.Timestamptz
-  progress     Decimal   @default(0.00) @map("progress") @db.Decimal(5, 2)
+  progress    Decimal   @default(0.00) @map("progress") @db.Decimal(5, 2)
   deletedAt   DateTime? @map("deleted_at") @db.Timestamptz
   createdAt   DateTime  @default(now()) @map("created_at") @db.Timestamptz
   updatedAt   DateTime  @updatedAt @map("updated_at") @db.Timestamptz
@@ -141,7 +163,7 @@ model QuizAttempt {
   enrollmentId  Int       @map("enrollment_id")
   moduleId      Int       @map("module_id")
   attemptNumber Int       @default(1) @map("attempt_number")
-  score          Decimal  @db.Decimal(5, 2)
+  score         Decimal   @db.Decimal(5, 2)
   passed        Boolean   @default(false)
   answers       Json?     @db.JsonB
   startedAt     DateTime  @default(now()) @map("started_at") @db.Timestamptz
@@ -254,7 +276,7 @@ model Payment {
   enrollmentId   Int       @map("enrollment_id")
   userId         Int       @map("user_id")
   courseId       Int       @map("course_id")
-  amount          Decimal  @db.Decimal(10, 2)
+  amount         Decimal   @db.Decimal(10, 2)
   currency       String    @default("USD") @db.VarChar(3)
   status         String    @default("pending") @db.VarChar(20)
   paymentGateway String?   @map("payment_gateway") @db.VarChar(50)

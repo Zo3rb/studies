@@ -18,6 +18,7 @@
 
 - `roles`
 - `users` (+ `language` column for EN/AR)
+- `uploaded_files` (+ `users.avatar_file_id` for optional profile avatar)
 - `user_roles`
 
 ### Content & Translations
@@ -69,6 +70,7 @@
 ## 3. Full Relationships Overview
 
 - Users have roles via `user_roles`
+- Users may own uploaded files via `uploaded_files`, and `users.avatar_file_id` can point to one uploaded file for the profile avatar
 - Courses → Modules → Lessons (hierarchical)
 - Courses have many preview videos
 - Courses, Modules, Lessons have translations (`_translations` tables)
@@ -83,6 +85,7 @@
 
 - The course-to-category relationship is modeled with a nullable `courses.category_id` FK to `categories` and the explicit join table `course_categories` for multi-category assignment.
 - Init scripts now use valid foreign key references and a schema-safe DDL order so the database can be created cleanly in the documented sequence.
+- Uploaded files are modeled separately from avatars so the same storage pattern can support future attachments without tying the schema to a single use case.
 
 ---
 

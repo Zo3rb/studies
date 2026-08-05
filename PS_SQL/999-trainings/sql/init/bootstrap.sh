@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+: "${DATABASE_URL:?DATABASE_URL is required}"
+
+for sql_file in \
+  001_roles.sql \
+  002_users.sql \
+  003_user_roles.sql \
+  004_courses.sql \
+  005_modules.sql \
+  006_lessons.sql \
+  007_enrollments.sql \
+  008_quiz_attempts.sql \
+  009_categories.sql \
+  010_tags.sql \
+  011_course_tags.sql \
+  012_course_categories.sql \
+  013_certificates.sql \
+  014_audit_logs.sql \
+  015_course_reviews.sql \
+  016_payments.sql \
+  017_notifications.sql \
+  018_course_preview_videos.sql \
+  019_chat_rooms.sql \
+  020_chat_messages.sql \
+  021_chat_participants.sql \
+  022_email_campaigns.sql \
+  023_email_logs.sql \
+  024_course_translations.sql \
+  025_module_translations.sql \
+  026_lesson_translations.sql \
+  027_uploaded_files.sql
+  do
+  psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f "$script_dir/$sql_file"
+done
