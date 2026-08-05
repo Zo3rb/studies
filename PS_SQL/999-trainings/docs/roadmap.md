@@ -16,7 +16,13 @@ We build this phase by phase. Each phase ends with documentation updates.
 - SQL init scripts repaired for valid foreign keys, correct table references, and schema-safe DDL
 - Prisma schema normalized for runtime use and parity with the native SQL definitions
 
-## Phase 2 – Backend API (Next)
+## Phase 2 – Backend API (In progress / Planning)
+
+- Document API conventions and endpoint groups
+- Define backend startup and request-handling architecture
+- Specify auth, RBAC, and current-user flow
+- Prioritize the first CRUD slice: users, courses, enrollments, and uploaded files
+- Add the initial testing and validation strategy
 
 ## Phase 3 – Frontend (React)
 

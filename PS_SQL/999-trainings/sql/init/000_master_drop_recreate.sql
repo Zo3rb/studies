@@ -1,2 +1,0 @@
--- Reset manifest for trainings-platform Phase 1.
--- Use sql/init/reset.sh to drop and recreate public, then run the bootstrap launcher.
