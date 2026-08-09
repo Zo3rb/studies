@@ -93,8 +93,9 @@ Before generating **any** code, suggestion, or answer:
 - **Root folder**: `999-trainings`
 - **Project name**: `trainings-platform`
 - **License**: MIT
-- **Current Phase**: Phase 0 – Scaffolding (Completed)
-- **Next Phase**: Phase 1 – Database Foundation
+- **Current Phase**: Phase 2 – Backend API (In progress / Planning)
+- **Previous Phase**: Phase 1 – Database Foundation (Completed)
+- **Current Phase Goal**: Finalize backend conventions and implementation decisions before scaffolding the API.
 
 ---
 
