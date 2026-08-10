@@ -1,0 +1,10 @@
+<pre class="prettyprint linenums">def my_decorator(target):
+    def function_wrapper():
+        return "I like solving " + target() + " in Python. It's my hobby, really!"
+    return function_wrapper
+    
+@my_decorator
+def target():
+    return "coding exercises"
+    
+print(target())</pre>

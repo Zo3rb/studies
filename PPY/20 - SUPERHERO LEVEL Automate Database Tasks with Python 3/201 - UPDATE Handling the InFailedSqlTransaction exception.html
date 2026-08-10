@@ -1,0 +1,23 @@
+<p>Should you get the following exception when trying to create a table as shown in the previous video, then what you should do it to rollback the transaction and then try again, as shown below.</p><p><br></p><pre class="prettyprint linenums">&gt;&gt;&gt; cursor.execute('''create table mystaff.employees
+      (id int primary key not null,
+       first_name varchar(25) not null,
+       last_name varchar(25) not null,
+       department varchar(25) not null,
+       phone varchar(25),
+       address varchar(50),
+       salary int);''')
+Traceback (most recent call last):
+  File "&lt;pyshell#8&gt;", line 1, in &lt;module&gt;
+    cursor.execute('''create table mystaff.employees
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+&gt;&gt;&gt; 
+&gt;&gt;&gt; connection.rollback()
+&gt;&gt;&gt; cursor.execute('''create table mystaff.employees
+      (id int primary key not null,
+       first_name varchar(25) not null,
+       last_name varchar(25) not null,
+       department varchar(25) not null,
+       phone varchar(25),
+       address varchar(50),
+       salary int);''')
+&gt;&gt;&gt; </pre>

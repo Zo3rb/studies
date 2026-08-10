@@ -1,0 +1,7 @@
+<pre class="prettyprint linenums">def this_func(x, y):
+    for i in range(5):
+        yield x * i / y
+
+a = this_func(5, 10)
+
+print(type(a)) #this should return &lt;class 'generator'&gt; in the end</pre>

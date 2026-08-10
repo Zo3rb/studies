@@ -20,6 +20,7 @@ This folder contains all project documentation.
 
 - [backend/README.md](backend/README.md)
 - [backend/phase-2-plan.md](backend/phase-2-plan.md)
+- [backend/platform-foundation.md](backend/platform-foundation.md)
 - [backend/api-design.md](backend/api-design.md)
 - [backend/tech-stack.md](backend/tech-stack.md)
 - [backend/best-practices.md](backend/best-practices.md)

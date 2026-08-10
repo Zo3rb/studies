@@ -1,0 +1,11 @@
+<p><strong>Contents of the .gitlab-ci.yml file:</strong></p><pre class="prettyprint linenums">image: python:3.8
+
+test:
+  script:
+    - pip install django
+    - python manage.py test
+</pre><p><br></p><p><strong>Committing the .gitlab-ci.yml file:</strong></p><pre class="prettyprint linenums">git add .gitlab-ci.yml
+git commit -m "added gitlab-ci"
+git push</pre><p><br></p><p><strong>Committing changes to the Gitlab project:</strong></p><pre class="prettyprint linenums">git add -u
+git commit -m "Made test to fail to demonstrate failed pipeline"
+git push</pre>

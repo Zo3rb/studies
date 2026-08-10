@@ -1,0 +1,12 @@
+<p>In recent versions of Bokeh, you might get a warning when running the code in the previous video:</p><pre class="prettyprint linenums">BokehDeprecationWarning: 'legend' keyword is deprecated, use explicit 'legend_label', 'legend_field', or 'legend_group' keywords instead</pre><p>To fix this, just replace <strong>legend </strong>in your code with <strong>legend_label</strong>.</p><pre class="prettyprint linenums">from bokeh.plotting import figure, output_file, show
+
+x = [10, 20, 30, 40, 50, 60, 70, 90]
+y = [11, 12, 14, 16, 17, 18, 19, 21]
+
+output_file("line.html")
+
+p = figure(title = "Basic Line Plot", x_axis_label = 'X-Axis', y_axis_label = 'Y-Axis')
+
+p.line(x, y, legend_label = "Price", line_width = 3)
+
+show(p)</pre>

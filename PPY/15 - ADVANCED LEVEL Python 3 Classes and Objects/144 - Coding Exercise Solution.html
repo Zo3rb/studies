@@ -1,0 +1,12 @@
+<pre class="prettyprint linenums">class MyRouter(object):
+    def __init__(self, routername, model, serialno, ios):
+        self.routername = routername
+        self.model = model
+        self.serialno = serialno
+        self.ios = ios
+
+router1 = MyRouter('R1', '2600', '123456', '12.4')
+
+setattr(router1, "serialno", "2019ABC2020")
+
+print(router1.serialno)</pre>

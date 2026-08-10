@@ -1,0 +1,7 @@
+<pre class="prettyprint linenums">import re
+
+regex_str = "123.456.789   0 PYTHON 3"
+
+regex = re.search(r"(.+?)\s{2,}", regex_str)
+
+print(regex.group(1))</pre>

@@ -1,0 +1,30 @@
+<p><strong>Final version of articles.html</strong></p><pre class="prettyprint linenums">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Blog articles(not fake)&lt;/title&gt;
+    &lt;style&gt;
+        input {display: block;}
+        textarea {display: block;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form action="" method="post"&gt;
+   {% csrf_token %}
+   {‌{ form }}
+   &lt;input type="submit" value="Create Article"&gt;
+&lt;/form&gt;
+
+&lt;ul&gt;
+   {% for article in articles %}
+   &lt;li&gt;
+       &lt;p&gt;Title: {‌{article.title}}&lt;/p&gt;
+       &lt;p&gt;Category: {‌{article.category}}&lt;/p&gt;
+       &lt;p&gt;Created by: {‌{article.author}}&lt;/p&gt;
+       &lt;p&gt;Posted at: {‌{article.created_at}}&lt;/p&gt;
+       &lt;a href="http://localhost:8080/blog/articles/{‌{ article.id }}"&gt;Read the article&lt;/a&gt;
+   &lt;/li&gt;
+   {% endfor %}
+&lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
