@@ -21,6 +21,8 @@ Welcome to my **Learning Journey** repository! As a software engineer leveraging
 | :--- | :--- | :---: |
 | 🗂️ **[Module 1: Data Types](./PS_SQL/01-DataTypes/README.md)** | 16 Lessons: Numeric, Characters, Dates, UUIDs, Enums, Collations, Check Constraints | ✅ Complete |
 | ⚡ **[Module 2: Advanced Data Types](./PS_SQL/02-AdvancedDataTypes/README.md)** | 16 Lessons: Intervals, Sequences, Identity, JSON, Arrays, Ranges, Composite Types, FKs | ✅ Complete |
+| 🔍 **[Module 3: Indexing](./PS_SQL/03-Indexing/README.md)** | 14 Lessons: B-Trees, Primary Keys, Composite, Covering & Partial Indexes | ✅ Complete |
+| 🚀 **[Module 4: Advanced Indexing](./PS_SQL/04-AdvancedIndexing/README.md)** | 4 Lessons: Functional, Duplicate, Hash Indexes | ✅ Complete |
 
 ---
 
