@@ -1,37 +1,65 @@
-# 📌 Zo3rb's Learning & AI/ML Engineering Journey 🚀
+# Learning Portfolio: Data, AI, Engineering & DevOps
 
-## 📖 About This Repository
+This repository documents my hands-on learning across data analytics, generative AI, machine learning, and DevOps. It is a working portfolio of notes, exercises, problem-solving practice, and small projects—not a collection of finished production systems.
 
-Welcome to my **Learning Journey** repository! As a software engineer leveraging into **AI/ML Engineering** and **DevOps**, this space serves as my digital notebook—tracking my hands-on studies, database architectures, algorithmic problem-solving, and production-ready projects.
+My current goal is to build strong engineering foundations and apply them to data- and AI-focused work: working with data, building reliable software, and learning how to package and operate it.
 
----
+## Learning Focus
 
-## 🎯 Primary Goals & Roadmap
+### Data Analytics
 
-- 🗄️ **Database Engineering (PostgreSQL & SQL):** Deep dive into PostgreSQL data types, schema design, constraints, indexing, query execution plans, and vector search (`pgvector`).
-- 🤖 **AI/ML Engineering:** Master Python Data Science libraries (NumPy, Pandas, PyTorch), mathematical foundations (Linear Algebra, Calculus, Probability), and feature engineering.
-- ⚡ **Data Structures & Algorithms:** Solve problems systematically on LeetCode using Python & JavaScript.
-- ⚙️ **DevOps & Cloud Automation:** Docker, Kubernetes, CI/CD pipelines, and cloud database infrastructure.
+I am building practical SQL and PostgreSQL skills for querying, cleaning, aggregating, and modeling data. The PostgreSQL work includes exercises using both a training database and the `dvdrental` sample database.
 
----
+- [Intro to PostgreSQL](./PS_SQL/000_Intro_to_Postgres/README.md) — querying, filtering, operators, `NULL` handling, aggregation, and `HAVING`.
+- [Mastering PostgreSQL](./PS_SQL/001_Mastering_Postgres/) — data types, constraints, advanced types, and indexing exercises.
+- [SQL practice materials](./PS_SQL/999_trainings/README.md)
 
-## 📊 SQL & PostgreSQL Progress
+### Generative AI & Machine Learning
 
-| Module | Description | Status |
-| :--- | :--- | :---: |
-| 🗂️ **[Module 1: Data Types](./PS_SQL/01-DataTypes/README.md)** | 16 Lessons: Numeric, Characters, Dates, UUIDs, Enums, Collations, Check Constraints | ✅ Complete |
-| ⚡ **[Module 2: Advanced Data Types](./PS_SQL/02-AdvancedDataTypes/README.md)** | 16 Lessons: Intervals, Sequences, Identity, JSON, Arrays, Ranges, Composite Types, FKs | ✅ Complete |
-| 🔍 **[Module 3: Indexing](./PS_SQL/03-Indexing/README.md)** | 14 Lessons: B-Trees, Primary Keys, Composite, Covering & Partial Indexes | ✅ Complete |
-| 🚀 **[Module 4: Advanced Indexing](./PS_SQL/04-AdvancedIndexing/README.md)** | 4 Lessons: Functional, Duplicate, Hash Indexes | ✅ Complete |
+I am developing the programming, mathematical, and data foundations needed for AI and machine-learning work. This repository currently includes an AI-agent learning module and foundational work in Python, algorithms, and mathematics; dedicated end-to-end ML projects will be added as that work progresses.
 
----
+- [Build an AI Agent](./boot.dev/08-build-ai-agent/README.md)
+- [Python foundations](./boot.dev/01-learn-python-for-beginners/README.md)
+- [Mathematics notes](./maths.md)
+- [Data Structures & Algorithms](./DSA/README.md)
 
-## 🛠️ Tech Stack & Tools
+### DevOps & Systems
 
-- **Languages:** Python, JavaScript, TypeScript, SQL, Bash
-- **Databases:** PostgreSQL, DBeaver, Neon Cloud
-- **Tools & Frameworks:** Node.js, React, Git, Docker
+I am learning the tools and practices that support repeatable software delivery and reliable development environments, with an emphasis on Linux, Git, Docker, HTTP, and shell scripting.
 
----
+- [Linux](./boot.dev/02-learn-linux/README.md)
+- [Git](./boot.dev/04-learn-git/README.md)
+- [Docker](./boot.dev/21-learn-docker/README.md)
+- [Bash Scripting Utility Lab](./projects/system_toolkit/README.md)
 
-📌 _This repository is continuously updated as I progress through my learning path—stay tuned!_ 🚀
+## Supporting Engineering Practice
+
+These areas strengthen the core skills behind my data, AI, and DevOps goals.
+
+- [Backend Developer Path](./boot.dev/README.md) — Python, TypeScript, SQL, HTTP, Docker, and backend architecture.
+- [LeetCode solutions](./leetcode/README.md) — algorithmic problem solving in Python, JavaScript, TypeScript, and SQL.
+- [Personal projects](./projects/) — web applications, scripting utilities, and programming exercises.
+
+## Tools & Technologies
+
+**Languages:** Python, SQL, JavaScript, TypeScript, Bash
+
+**Data:** PostgreSQL
+
+**Engineering & DevOps:** Linux, Git, Docker, HTTP, Node.js
+
+**Frontend projects:** React, Vite, Tailwind CSS
+
+## Repository Structure
+
+```text
+PS_SQL/    PostgreSQL courses, notes, and SQL practice
+DSA/       Data structures and algorithms study material
+leetcode/  Documented coding-challenge solutions
+boot.dev/  Backend, systems, Docker, and AI-agent learning modules
+projects/  Hands-on applications and utilities
+```
+
+## Direction
+
+I am actively expanding this portfolio toward data-analysis workflows, machine-learning projects, generative-AI applications, and containerized deployments. Each addition is intended to show both what I am learning and how I apply it in code.
