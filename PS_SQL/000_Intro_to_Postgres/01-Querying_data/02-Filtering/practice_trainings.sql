@@ -3,23 +3,19 @@
 -- DATABASE: trainings
 -- ========================================================
 
--- 1. Setup a simple table for testing
-CREATE TABLE demo_02_filtering (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(50),
-    category VARCHAR(20),
-    price NUMERIC(10, 2)
-);
+-- 1. Using the products table from Lesson 1
+-- Find all electronics
+SELECT product_name, price 
+FROM products 
+WHERE category = 'Electronics';
 
--- 2. Insert dummy data
-INSERT INTO demo_02_filtering (name, category, price) VALUES
-('Item A', 'Tech', 100.00),
-('Item B', 'Tech', 150.00),
-('Item C', 'Home', 50.00),
-('Item D', NULL, 20.00);
+-- 2. Combining conditions with AND
+SELECT product_name, price 
+FROM products 
+WHERE category = 'Electronics' AND price < 1000;
 
--- 3. Run queries to test Filtering concepts
-SELECT * FROM demo_02_filtering;
-
--- 4. Cleanup
-DROP TABLE demo_02_filtering;
+-- 3. Combining conditions with OR and parentheses (Best Practice)
+SELECT product_name, category, price 
+FROM products 
+WHERE (category = 'Furniture' OR category = 'Kitchen') 
+  AND price < 100;

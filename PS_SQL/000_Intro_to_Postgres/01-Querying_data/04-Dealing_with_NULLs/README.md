@@ -1,14 +1,13 @@
-# Dealing with NULLs
+# Lesson 04: Dealing with NULLs
 
 ## 📖 Overview
-Understanding IS NULL, IS NOT NULL, and COALESCE.
+In SQL, `NULL` represents a missing or unknown value. It is **not** zero, and it is **not** an empty string. Because `NULL` means "unknown", comparing a value to `NULL` using standard operators (`=`, `!=`) will always result in `NULL` (unknown), not True or False.
 
 ## 🧠 Key Concepts
-- We are learning the core fundamentals of querying data.
-- Refer to the practice SQL scripts to see how this translates to actual database queries.
+- **`IS NULL` / `IS NOT NULL`**: The only safe way to check if a column is or isn't `NULL`. You cannot use `= NULL`.
+- **`COALESCE(val1, val2, ...)`**: Returns the first non-null value in the list. Excellent for providing default values when data is missing.
+- **NULLs in Math**: Any mathematical operation involving a `NULL` results in `NULL` (e.g., `5 + NULL = NULL`).
 
-## 🛠️ Usage Example
-```sql
--- Example placeholder
--- Check the practice SQL files for full implementations.
-```
+## 🏆 Best Practices
+- **Design**: If a column should absolutely always have a value, use a `NOT NULL` constraint in your schema.
+- **Reporting**: Use `COALESCE` in `SELECT` statements to format reports nicely so business users see 'N/A' or '0' instead of a blank NULL.

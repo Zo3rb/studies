@@ -3,23 +3,30 @@
 -- DATABASE: trainings
 -- ========================================================
 
--- 1. Setup a simple table for testing
-CREATE TABLE demo_04_dealing_with_nulls (
-    id SERIAL PRIMARY KEY,
+-- 1. Create a table with optional (nullable) columns
+CREATE TABLE IF NOT EXISTS employee_bonus (
+    emp_id INT PRIMARY KEY,
     name VARCHAR(50),
-    category VARCHAR(20),
-    price NUMERIC(10, 2)
+    salary NUMERIC,
+    bonus NUMERIC -- Can be NULL
 );
 
--- 2. Insert dummy data
-INSERT INTO demo_04_dealing_with_nulls (name, category, price) VALUES
-('Item A', 'Tech', 100.00),
-('Item B', 'Tech', 150.00),
-('Item C', 'Home', 50.00),
-('Item D', NULL, 20.00);
+INSERT INTO employee_bonus (emp_id, name, salary, bonus) VALUES
+(1, 'Alice', 50000, 5000),
+(2, 'Bob', 60000, NULL),
+(3, 'Charlie', 55000, 0);
 
--- 3. Run queries to test Dealing with NULLs concepts
-SELECT * FROM demo_04_dealing_with_nulls;
+-- 2. Wrong way to check for NULL (Returns nothing!)
+SELECT * FROM employee_bonus WHERE bonus = NULL;
 
--- 4. Cleanup
-DROP TABLE demo_04_dealing_with_nulls;
+-- 3. Correct way: IS NULL
+SELECT * FROM employee_bonus WHERE bonus IS NULL;
+
+-- 4. Using COALESCE to provide a default value of 0 for math
+-- Total Compensation = Salary + Bonus
+SELECT 
+    name, 
+    salary, 
+    COALESCE(bonus, 0) AS actual_bonus,
+    (salary + COALESCE(bonus, 0)) AS total_compensation
+FROM employee_bonus;

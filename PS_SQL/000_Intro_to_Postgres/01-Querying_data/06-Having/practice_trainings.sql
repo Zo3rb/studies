@@ -3,23 +3,21 @@
 -- DATABASE: trainings
 -- ========================================================
 
--- 1. Setup a simple table for testing
-CREATE TABLE demo_06_having (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(50),
-    category VARCHAR(20),
-    price NUMERIC(10, 2)
-);
+-- 1. Find categories that have more than 100 items in total stock
+SELECT 
+    category,
+    SUM(stock_quantity) AS total_stock
+FROM products
+GROUP BY category
+HAVING SUM(stock_quantity) > 100;
 
--- 2. Insert dummy data
-INSERT INTO demo_06_having (name, category, price) VALUES
-('Item A', 'Tech', 100.00),
-('Item B', 'Tech', 150.00),
-('Item C', 'Home', 50.00),
-('Item D', NULL, 20.00);
-
--- 3. Run queries to test Having concepts
-SELECT * FROM demo_06_having;
-
--- 4. Cleanup
-DROP TABLE demo_06_having;
+-- 2. Combining WHERE and HAVING
+-- Filter out products cheaper than $50 before grouping, 
+-- then only show categories with > 1 product remaining.
+SELECT 
+    category,
+    COUNT(*) AS premium_products
+FROM products
+WHERE price >= 50.00
+GROUP BY category
+HAVING COUNT(*) > 1;

@@ -1,25 +1,25 @@
 -- ========================================================
--- Topic: Operators and pattern matching
+-- Topic: Operators and Pattern Matching
 -- DATABASE: trainings
 -- ========================================================
 
--- 1. Setup a simple table for testing
-CREATE TABLE demo_03_operators_and_pattern_matching (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(50),
-    category VARCHAR(20),
-    price NUMERIC(10, 2)
-);
+-- 1. Using IN (Cleaner than OR)
+SELECT product_name, category 
+FROM products 
+WHERE category IN ('Electronics', 'Furniture');
 
--- 2. Insert dummy data
-INSERT INTO demo_03_operators_and_pattern_matching (name, category, price) VALUES
-('Item A', 'Tech', 100.00),
-('Item B', 'Tech', 150.00),
-('Item C', 'Home', 50.00),
-('Item D', NULL, 20.00);
+-- 2. Using BETWEEN (Inclusive range)
+SELECT product_name, price 
+FROM products 
+WHERE price BETWEEN 50.00 AND 300.00;
 
--- 3. Run queries to test Operators and pattern matching concepts
-SELECT * FROM demo_03_operators_and_pattern_matching;
+-- 3. Pattern Matching with LIKE (Case-sensitive)
+-- Find products starting with 'Lap'
+SELECT product_name 
+FROM products 
+WHERE product_name LIKE 'Lap%';
 
--- 4. Cleanup
-DROP TABLE demo_03_operators_and_pattern_matching;
+-- 4. Pattern Matching with ILIKE (Case-insensitive)
+SELECT product_name 
+FROM products 
+WHERE product_name ILIKE '%chair%';
