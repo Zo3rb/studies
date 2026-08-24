@@ -1,0 +1,52 @@
+DAY 2 — Testing, Computing, Comparisons, and Loops
+
+START HERE
+Read ../../notes/day-02.md in this order: testing and debugging; computing;
+comparisons and conditionals; then loops. Predict each example's output before
+running it. The note includes free official and YouTube resources.
+
+PROJECT CONTEXT
+Extend the Learning Journal CLI. A study session will now have a level and a
+text-only progress bar. This is an exercise in decisions and repetition; it is
+not yet interactive and does not save data.
+
+YOUR CODING TASK
+Open src/control_flow.py and implement these functions yourself:
+
+1. classify_session(minutes_studied)
+   Return "short" when minutes are less than 30.
+   Return "focused" when minutes are from 30 through 89.
+   Return "deep" when minutes are 90 or greater.
+   Use if / elif / else. Boundary values matter.
+
+2. build_progress_bar(completed, goal)
+   Return a string with exactly goal marker positions, enclosed in brackets.
+   Each completed position is "#" and every remaining position is "-".
+   Example: build_progress_bar(3, 5) returns "[###--]".
+   Use a for loop with range(). Do not use string multiplication for this task.
+   Assume 0 <= completed <= goal; error handling belongs to Day 4.
+
+3. build_daily_report(topic, minutes_studied, lessons_completed, lesson_goal)
+   Call the first two functions. Return exactly:
+   "Topic: <topic> | Level: <level> | Progress: <bar>"
+
+CONSTRAINTS
+- Use only the standard library; no virtual environment or package is needed.
+- Keep every function small and make it return a value instead of printing.
+- Do not edit tests to make them pass.
+- Use names that describe a value: minutes_studied, lessons_completed, lesson_goal.
+
+RUN THE TESTS
+From this day-02-control-flow directory, run:
+  python3 -m unittest discover -s tests -v
+
+Tests initially fail because the starter functions are intentionally unfinished.
+Implement the source code, read the first failing test carefully, and rerun all
+tests after each change.
+
+DONE WHEN
+- All tests pass.
+- You can explain why 30 and 90 are useful boundary tests.
+- You can trace one loop iteration at a time and explain why range(goal) stops
+  before goal.
+- You write the reflection at the end of ../../notes/day-02.md.

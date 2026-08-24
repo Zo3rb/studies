@@ -1,0 +1,53 @@
+DAY 1 — Foundations: Introduction, Variables, Functions, and Scope
+
+PROJECT CONTEXT
+Build the first piece of a Learning Journal CLI. Today it represents exactly one
+study session. Its only job is to create readable text; it does not accept user
+input, save data, use a class, or use a collection yet.
+
+BOOT.DEV FIRST
+1. Complete the Introduction, Variables, Functions, and Scope chapters in Boot.dev.
+2. In ../../notes/day-01.md, record one concept, one example, and one question
+   for each chapter. The notes are for you; concise is enough.
+
+YOUR CODING TASK
+Open src/session_summary.py and implement these two functions yourself:
+
+1. build_heading(learner_name)
+   Return exactly: "<learner_name>'s Learning Journal"
+
+2. format_session(topic, lessons_completed, minutes_studied)
+   Return exactly:
+   "Topic: <topic> | Lessons: <lessons_completed> | Time: <minutes_studied> minutes"
+
+Use parameters and f-strings. The function must RETURN a string; it must not
+print. Choose descriptive parameter names. Values needed by a function should be
+passed to it instead of read from a global variable.
+
+OPTIONAL MANUAL CHECK
+After the tests pass, add temporary variables and calls at the bottom of the file
+to see your text. Remove those temporary calls before committing, so importing the
+module does not print unexpected output.
+
+DO NOT USE YET
+Lists, dictionaries, sets, loops, input(), classes, files, imports, type hints,
+try/except, external packages, or a virtual environment. Those belong to later
+Boot.dev chapters and later days of this project.
+
+RUN THE TESTS
+From this day-01-foundations directory, run:
+  python3 -m unittest discover -s tests -v
+
+The tests initially fail because the starter functions are intentionally empty.
+Do not edit tests to make them pass. Fix your implementation in src/.
+
+DONE WHEN
+- Both tests pass.
+- You can explain parameter vs argument, local vs global scope, and return vs print.
+- Your notes contain a short reflection: what was easy, what was confusing, and
+  what you will try first tomorrow.
+
+REVIEW REQUEST
+Send the contents of src/session_summary.py plus the complete test command output.
+You will receive a review of correctness, naming, scope, duplication, and the
+best next small improvement—without moving ahead of the curriculum.

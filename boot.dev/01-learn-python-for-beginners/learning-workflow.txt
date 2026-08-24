@@ -1,0 +1,58 @@
+DAY-BY-DAY LEARNING WORKFLOW
+
+1. Learn before building
+   Complete the assigned Boot.dev chapters and their own exercises first. Do not
+   look for a project solution while attempting a Boot.dev exercise.
+
+2. Recall, then consult
+   Write a small answer or attempt from memory before reading your notes, hints,
+   documentation, or asking for help. When stuck, share what you expected, what
+   happened, and the smallest relevant code sample.
+
+3. Build one small behavior
+   Read the day's instructions, implement only one requested behavior, and run
+   its tests. Avoid “bonus” features that require concepts you have not studied.
+   A small finished feature teaches more than a large half-understood one.
+
+4. Read failures carefully
+   A test failure states expected and actual values. Trace the first failure,
+   change your source code (not the tests), then rerun the full test command.
+
+5. Review before advancing
+   When tests pass, provide the changed source file and complete test output for
+   review. Review priorities are: correctness, clarity, scope, duplication,
+   simple design, then efficiency. Improvements are explained in terms of your
+   current curriculum level.
+
+6. Reflect and commit
+   Add a short note: learned, confusing, and next action. Inspect `git diff`, then
+   make one small commit for the day. Do not commit Python cache directories or
+   personal secrets.
+
+DEPENDENCY POLICY
+Use Python's standard library by default. Add no package just to make a beginner
+exercise shorter. If a later project genuinely needs a third-party package, first
+record why it is needed, create an isolated virtual environment inside that
+project, and pin/document the dependency. Never use a global installation for
+project dependencies.
+
+TYPE-CONTRACT POLICY
+Use built-in Python parameter and return annotations to document expected types.
+Do not add manual runtime type-validation helpers unless explicitly requested.
+Annotations are a contract for readers, tests, and future static-analysis tools;
+they do not cause Python to validate values while the program runs.
+
+PROJECT DESIGN POLICY
+Keep code modular once the curriculum has introduced modules; do not force a
+class into an early fundamentals exercise. The Backend Developer Path teaches OOP
+after Python, Linux, BookBot, and Git, so classes belong in that dedicated course.
+At this stage, small functions with clear inputs and outputs are the correct form
+of structure.
+
+NOTES AND RESOURCE STANDARD
+When requested, each topic note will be self-contained and detailed: a visual
+mental model, a plain-language explanation, small runnable examples, common
+mistakes, a recap, and practice questions. Resources will prioritize official
+documentation and include selected free reading and YouTube videos when they add
+clear value. Learning still requires active work: read or watch a small section,
+predict an example's result, run or change it, then explain it in your own words.
