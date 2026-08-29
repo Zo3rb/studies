@@ -1,0 +1,59 @@
+DAY 3 — Lists, Dictionaries, and Sets
+
+START HERE
+Read ../../notes/day-03.md. First study the collection-selection guide, then
+lists, dictionaries, and sets. Predict the output of each example before running
+it. The note contains free official reading and a YouTube resource.
+
+PROJECT CONTEXT
+The Learning Journal can now represent several study topics. You will use one
+list to retain every topic in order, a dictionary to count how often topics occur,
+and a set to answer which topics were studied at least once.
+
+YOUR CODING TASK
+Open src/topic_tracker.py and implement these functions yourself:
+
+1. record_topic(topics, topic)
+   Append topic to the existing topics list. Return None explicitly or implicitly.
+   This function intentionally changes the supplied list in place.
+
+2. count_topics(topics)
+   Return a dictionary mapping each topic to its number of occurrences.
+   Example: ["Variables", "Loops", "Variables"] becomes
+   {"Variables": 2, "Loops": 1}. Use a loop and a dictionary.
+
+3. get_unique_topics(topics)
+   Return a set containing every topic once. Use a set; do not manually check for
+   duplicates in a list.
+
+4. build_topic_report(topics)
+   Use the other functions and return exactly:
+   "Study sessions: <number> | Unique topics: <number>"
+
+TYPE CONTRACTS
+The starter code includes parameter and return annotations. Keep them accurate,
+but do not add manual runtime type-validation helpers. Annotations document the
+expected contract; their enforcement belongs to a future static-analysis tool or
+a deliberately chosen validation strategy.
+
+CONSTRAINTS
+- Use Python's standard library only; no package or virtual environment is needed.
+- Do not edit the tests to make them pass.
+- Keep record_topic's mutation intentional and visible. The other functions must
+  not modify the topics list.
+- Do not use classes, files, or error handling yet.
+
+RUN THE TESTS
+From this day-03-collections directory, run:
+  python3 -m unittest discover -s tests -v
+
+Tests initially fail because the functions are intentionally unfinished. Read the
+first failure, update src/topic_tracker.py, then rerun the entire test suite.
+
+DONE WHEN
+- All tests pass.
+- You can choose between a list, dictionary, and set based on the question being
+  asked—not merely because the syntax is familiar.
+- You can explain why record_topic changes the caller's list but count_topics does
+  not.
+- You complete the reflection at the end of ../../notes/day-03.md.
