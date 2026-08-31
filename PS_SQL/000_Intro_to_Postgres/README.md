@@ -8,6 +8,7 @@ Welcome to the **Intro to Postgres** study repository! This project follows the 
 | :--- | :--- | :---: |
 | 🔍 **[Module 1: Querying data](./01-Querying_data/README.md)** | 6 Lessons: Exploring, Filtering, Operators, NULLs, Aggregating, Having | ✅ Complete |
 | 🔗 **[Module 2: Joining tables](./02-Joining_tables/README.md)** | 5 Lessons: Inner, Left, Right, Orphaned Data, Unions | ✅ Complete |
+| 📝 **[Module 3: Modifying data](./03-Modifying_data/README.md)** | 6 Lessons: Inserting, Updating, Upserting, Returning, Deleting, Vacuuming | ✅ Complete |
 
 ---
 

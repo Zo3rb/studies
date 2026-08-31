@@ -1,0 +1,47 @@
+DAY 4 — Reliability and Error Handling
+
+START HERE
+Read ../../notes/day-04.md. First study how exceptions work in Python, focusing on
+built-in exceptions (ValueError, TypeError, KeyError) and the try-except-finally pattern.
+
+PROJECT CONTEXT
+Your Learning Journal now needs to be robust against bad data. Users might try to
+remove topics that don't exist, pass the wrong type of arguments, or retrieve stats
+from an empty dataset. You will build a class that manages the topics and gracefully
+handles these errors using exceptions.
+
+YOUR CODING TASK
+Open src/topic_manager.py and implement the functions/methods yourself:
+
+1. add_topic(topics, topic)
+   Append the topic to the list. 
+   RAISE a ValueError if the topic is an empty string "".
+   RAISE a TypeError if the topic is not a string.
+
+2. remove_topic(topics, topic)
+   Remove the given topic from the list. 
+   RAISE a ValueError if the topic does not exist in the list.
+
+3. get_topic_at_index(topics, index)
+   Return the topic at the specific integer index.
+   CATCH the IndexError if the index is out of bounds, and instead raise a 
+   ValueError with the message "Index out of bounds".
+
+TYPE CONTRACTS
+The starter code includes parameter and return annotations. 
+
+CONSTRAINTS
+- Use Python's standard library only.
+- Do not edit the tests to make them pass.
+- Use explicit exception types (ValueError, TypeError) instead of bare `except:`.
+
+RUN THE TESTS
+From this day-04-reliability directory, run:
+  python3 -m unittest discover -s tests -v
+
+Tests initially fail because the functions are intentionally unfinished.
+
+DONE WHEN
+- All tests pass.
+- You can explain why raising custom exceptions makes your functions safer to use.
+- You complete the reflection at the end of ../../notes/day-04.md.
