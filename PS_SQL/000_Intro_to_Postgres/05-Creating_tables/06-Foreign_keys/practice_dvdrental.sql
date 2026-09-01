@@ -1,0 +1,1 @@
+-- Write your dvdrental‑database SQL practice queries here
