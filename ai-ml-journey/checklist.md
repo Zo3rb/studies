@@ -27,14 +27,14 @@
 
 ## Week 0 – Setup & Python Refresh
 
-- [ ] Install Python 3.11+, VS Code + Python extension, Node.js LTS, Docker Desktop.
-- [ ] Create GitHub's studies repo sub folder `ai-ml-journey` with folders: `00-setup`, `01-math`, `03-ml`, `04-ai`, `projects` (Note: DSA solved in main repo `../DSA/`).
-- [ ] Complete Python basics refresher (functions, modules, data structures).
-  - [ ] Free: [Python for Everybody (Coursera)](https://www.coursera.org/specializations/python) – audit Weeks 1–3.
+- [x] Install Python 3.11+, VS Code + Python extension, Node.js LTS, Docker Desktop.
+- [x] Create GitHub's studies repo sub folder `ai-ml-journey` with folders: `00-setup`, `01-math`, `03-ml`, `04-ai`, `projects` (Note: DSA solved in main repo `../DSA/`).
+- [x] Complete Python basics refresher (functions, modules, data structures).
+  - [x] Free: [Python for Everybody (Coursera)](https://www.coursera.org/specializations/python) – audit Weeks 1–3.
 - [ ] Learn Jupyter notebooks; create `eda-titanic.ipynb` with basic EDA.
 - [ ] Learn `numpy`, `pandas`, `matplotlib` basics via Kaggle Learn & Arabic YouTube tutorials (Mohamed Al Assaal / Elzero).
-- [ ] Solve 5 easy DSA problems on LeetCode/HackerRank in Python (save in `../DSA/`).
-- [ ] Write “My 18-month AI/ML goals” doc (roles, industries, salary, remote).
+- [x] Solve 5 easy DSA problems on LeetCode/HackerRank in Python (save in `../DSA/`).
+- [x] Write “My 18-month AI/ML goals” doc (roles, industries, salary, remote).
 
 **Deliverable:**
 
