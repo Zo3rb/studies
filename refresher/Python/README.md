@@ -11,16 +11,19 @@ receive deeper practice.
 
 ## Current status
 
-- Replit/Linux setup: skipped
-- First diagnostic session: complete
-- Reviewed:
-  - list mutation and rebinding;
-  - object identity;
-  - `+` versus `+=`;
-  - functions, loops, and conditions;
-  - return values and edge cases;
-  - basic assertions and code review.
-- Next topic: strings and parsing
+- **Session 1 (Functions, Objects, & Lists)**:
+  - 📖 Notes: [01-object-model-and-functions.md](file:///home/ali/Desktop/code/studies/refresher/Python/notes/01-object-model-and-functions.md)
+  - 💻 Examples: [01_session.py](file:///home/ali/Desktop/code/studies/refresher/Python/examples/01_session.py)
+  - 🧪 Tests: [test_01_session.py](file:///home/ali/Desktop/code/studies/refresher/Python/tests/test_01_session.py)
+- **Session 2 (Variables, Expressions, & Statements)**:
+  - 📖 Notes: [02-variables-expressions-and-statements.md](file:///home/ali/Desktop/code/studies/refresher/Python/notes/02-variables-expressions-and-statements.md)
+  - 💻 Examples: [02-variables-expressions-and-statements.py](file:///home/ali/Desktop/code/studies/refresher/Python/examples/02-variables-expressions-and-statements.py)
+  - 🧪 Tests: [test_02_variables.py](file:///home/ali/Desktop/code/studies/refresher/Python/tests/test_02_variables.py)
+- **Session 3 (Conditional Execution)**:
+  - 📖 Notes: [03-conditional-execution.md](file:///home/ali/Desktop/code/studies/refresher/Python/notes/03-conditional-execution.md)
+  - 💻 Examples: [03-conditional-execution.py](file:///home/ali/Desktop/code/studies/refresher/Python/examples/03-conditional-execution.py)
+  - 🧪 Tests: [test_03_conditionals.py](file:///home/ali/Desktop/code/studies/refresher/Python/tests/test_03_conditionals.py)
+- **Next Topic**: PY4E Chapter 4 — Functions & Modules
 
 ## PY4E roadmap
 
