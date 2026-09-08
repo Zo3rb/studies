@@ -340,12 +340,15 @@ The program runs but produces the wrong result:
 
 ```python
 pi = 3.14159
-wrong = 1 / 2 * pi
-right = 1 / (2 * pi)
+half_pi = 1 / 2 * pi
+reciprocal_two_pi = 1 / (2 * pi)
 ```
 
-Both expressions are valid Python, but they represent different mathematics.
-The programmer must make the intended grouping explicit.
+Both expressions are valid Python and neither is universally “wrong.” Python
+evaluates `1 / 2 * pi` from left to right as `(1 / 2) * pi`, which computes
+half of pi. The parentheses in `1 / (2 * pi)` make the denominator the entire
+quantity `2 * pi`, which computes the reciprocal of two pi. The programmer
+must choose the grouping that matches the intended formula.
 
 ## 11. Best practices for this lesson
 
@@ -360,6 +363,13 @@ The programmer must make the intended grouping explicit.
 - Keep the first implementation simple; add validation and error handling in a
   deliberate later pass.
 - Test with normal values, zero, negative values, and decimal values.
+
+The executable example also validates numeric boundaries deliberately. A
+boolean is rejected even though `bool` is a subclass of `int`, non-finite
+values such as `nan` and `inf` are rejected, and division by zero raises
+`ZeroDivisionError` before arithmetic is attempted. This avoids a subtle bug
+where a type check using `and` would reject only when both arguments were
+invalid; validation must reject either invalid argument.
 
 ## 12. Diagnostic questions
 
