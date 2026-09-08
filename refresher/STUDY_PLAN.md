@@ -104,17 +104,20 @@ You will:
 ## Folder structure
 
 ```text
+AGENT_GUIDELINES.md   # Governing guidelines for AI Agents / LLMs
+STUDY_PLAN.md         # Overall study roadmap
+
 Python/
   README.md
-  notes/
-  examples/
-  exercises/
+  notes/              # Lesson notes with 🧠 Maths & DSA Insights
+  examples/           # Progressive exercise stubs & examples
+  tests/              # Standard unittest test suites
+  exercises/          # Problem sets & markdown tasks
 
 PostgreSQL/
   README.md
-  notes/
-  examples/
-  exercises/
+  notes/              # SQL theory & optimization notes
+  exercises/          # DDL/DML exercises & queries
 ```
 
 The root `README.md` and `examples/session_01.py` contain the first Python

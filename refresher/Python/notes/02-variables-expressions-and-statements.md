@@ -391,3 +391,26 @@ Try to answer these before running the examples:
 Attempt the exercises in
 `Python/exercises/02-variables-expressions-and-statements.md`.
 The next lesson after this one is conditional execution.
+
+## 🧠 Maths & DSA Insights
+
+### 1. Integer vs Floating-Point Arithmetic
+
+- **Integer Division ($\mathbin{//}$) & Remainder ($\bmod$)**:
+  - $a = b \cdot (a \mathbin{//} b) + (a \bmod b)$ holds universally in modular arithmetic.
+  - In Python, $a \bmod b$ takes the sign of the divisor $b$ (unlike C/C++/Java where it takes the sign of dividend $a$).
+- **Floating-Point Representation (IEEE 754)**:
+  - Binary floating-point cannot accurately represent decimal fractions like `0.1` or `0.2` in finite bits.
+  - `0.1 + 0.2 == 0.3` evaluates to `False` (`0.30000000000000004`).
+  - **DSA / Math Best Practice**: When comparing floats, never use `==`. Use `math.isclose(a, b, rel_tol=1e-9)` or `abs(a - b) < 1e-9`.
+
+### 2. Time & Space Complexity ($O$)
+
+- **Arithmetic Operations**: Basic operators (`+`, `-`, `*`, `/`, `//`, `%`) on standard 64-bit integers and floats run in $\mathcal{O}(1)$ time and $\mathcal{O}(1)$ space.
+- **Arbitrary-Precision Integers**: Python automatically handles arbitrarily large integers (bignums). However, operations on numbers with $D$ digits have non-constant costs: addition is $\mathcal{O}(D)$ and multiplication is $\mathcal{O}(D^{\log_2 3}) \approx \mathcal{O}(D^{1.58})$ (Karatsuba algorithm).
+
+### 3. Piecewise Functions & Boundary Conditions
+
+- **Overtime Pay Formula ($f(h, r)$)**:
+  $$f(h, r) = \begin{cases} h \cdot r & \text{if } 0 \le h \le 40 \\ 40 \cdot r + (h - 40) \cdot 1.5r & \text{if } h > 40 \end{cases}$$
+- In algorithm design, piece-wise transitions (like thresholds or boundary checks) require explicit unit tests at $h = 40$ (boundary point), $h = 39.9$, and $h = 40.1$.

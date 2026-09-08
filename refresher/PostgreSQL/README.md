@@ -8,11 +8,12 @@ relational database, and the connection between databases and Python programs.
 
 ## Current status
 
-- Course folder: initialized
-- Database: `trainings`
-- Schema: `public`
-- First example: prepared
-- Next topic: relational foundations
+- Course track: **PostgreSQL for Everybody (PG4E)** by Dr. Charles Severance
+- Database: `trainings` (Schema: `public`)
+- **Week 1 (Single Table SQL / `01-Intro-to-SQL.ppt`)**:
+  - 📖 **Notes**: [01-intro-to-sql.md](file:///home/ali/Desktop/code/studies/refresher/PostgreSQL/notes/01-intro-to-sql.md) (Architecture, DDL, DML, DQL, 3VL, Maths & DSA Insights)
+  - 💻 **Examples**: [01-intro-to-sql.sql](file:///home/ali/Desktop/code/studies/refresher/PostgreSQL/examples/01-intro-to-sql.sql) (Executable CRUD queries & expected output tables)
+  - 🧪 **Exercises**: [01-intro-to-sql.md](file:///home/ali/Desktop/code/studies/refresher/PostgreSQL/exercises/01-intro-to-sql.md) (Autograder schema task, filtering, updates, & discussion)
 
 PG4E uses the `psql` command-line client in its examples and provides setup
 guidance for using a small course PostgreSQL server through PythonAnywhere.

@@ -207,3 +207,24 @@ assert summarize([2.5, 7.5]) == (2, 10.0, 5.0)
 - `is` checks identity; `==` checks values.
 - Edge cases such as empty input should be handled deliberately.
 - One-pass solutions are often clearer and more general.
+
+## 🧠 Maths & DSA Insights
+
+### 1. Complexity Analysis ($O$ Notation)
+- **Time Complexity**:
+  - `transform_positive_scale`: $\mathcal{O}(N)$ linear time where $N$ is the number of elements in `values`.
+  - `in_place_pad_vector`: $\mathcal{O}(K)$ where $K = \text{target\_len} - \text{len}(vec)$ appends. Overall list allocation is amortized $\mathcal{O}(1)$ per `append()`.
+  - `summarize_series`: $\mathcal{O}(N)$ single-pass linear time.
+- **Space Complexity**:
+  - **In-Place Mutation** (`in_place_pad_vector`): $\mathcal{O}(1)$ auxiliary space (mutates memory array in place).
+  - **Out-of-Place Allocation** (`transform_positive_scale`, `vector_add_constant`): $\mathcal{O}(N)$ auxiliary space (allocates a new array in heap memory).
+  - **Generator Streams** (`validated_numbers`): $\mathcal{O}(1)$ auxiliary space because elements are evaluated lazily one at a time.
+
+### 2. Memory Model & Pointer References
+- In Python, list variables store **references (pointers)** to objects, not raw values inline.
+- Mutating a list (`list.append()`, `list += [...]`) modifies the underlying contiguous pointer array without changing the variable's memory address (`id()`).
+- Rebinding (`items = items + [...]`) creates a brand-new list object in RAM and reassigns the local variable name pointer.
+
+### 3. Numerical & Boundary Edge Cases
+- **Booleans in Python are Subclasses of Integers**: `isinstance(True, int)` returns `True`! To prevent `True` or `False` from masquerading as numeric `1` or `0`, always check `if isinstance(val, bool): raise TypeError(...)` before checking `isinstance(val, (int, float))`.
+- **IEEE 754 Floating-Point Infinities & NaNs**: Values like `float('nan')` or `float('inf')` pass `isinstance(val, float)`! Use `math.isfinite(val)` to validate boundaries in numeric/DSA algorithms.

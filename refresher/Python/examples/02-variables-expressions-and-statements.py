@@ -1,180 +1,136 @@
 #!/usr/bin/env python3
-"""Examples for PY4E Chapter 2: variables, expressions, and statements."""
+"""Examples and exercise stubs for PY4E Chapter 2: variables, expressions, and statements.
 
-from math import isfinite
-from numbers import Real
+This module provides foundational exercises preparing for Mathematics and DSA tracks.
+All functions strictly conform to PEP 8 and Google Docstring standards using standard library typing.
+"""
 
+from __future__ import annotations
 
-def show_types() -> None:
-    """Demonstrate basic Python values and their types.
-
-    Args:
-        None.
-
-    Returns:
-        None.
-
-    Raises:
-        None.
-    """
-    values = [42, 3.14, "42", True, None]
-
-    for value in values:
-        print(repr(value), "->", type(value).__name__)
+from typing import Any
 
 
-def arithmetic_examples() -> None:
-    """Demonstrate common arithmetic operators.
+def analyze_numeric_types(values: list[Any]) -> list[tuple[str, str]]:
+    """Inspect a list of Python values and return pairs of (repr_string, type_name).
 
     Args:
-        None.
+        values: A list of arbitrary Python objects.
 
     Returns:
-        None.
+        list[tuple[str, str]]: A list of tuples where each element is (repr(val), type(val).__name__).
 
     Raises:
-        None.
+        TypeError: If values is not a list.
     """
-    print("7 + 2 =", 7 + 2)
-    print("7 - 2 =", 7 - 2)
-    print("7 * 2 =", 7 * 2)
-    print("7 / 2 =", 7 / 2)
-    print("7 // 2 =", 7 // 2)
-    print("7 % 2 =", 7 % 2)
-    print("7 ** 2 =", 7**2)
+    # Examples / Expected Behavior:
+    # analyze_numeric_types([42, 3.14, "42", True, None]) ->
+    #   [('42', 'int'), ('3.14', 'float'), ("'42'", 'str'), ('True', 'bool'), ('None', 'NoneType')]
+    # analyze_numeric_types("not a list") -> raises TypeError ("values must be a list")
+    raise NotImplementedError("Implement me!")
 
 
-def precedence_examples() -> None:
-    """Demonstrate precedence and explicit grouping.
+def safe_divide_and_modulo(a: int | float, b: int | float) -> tuple[float, int, float]:
+    """Perform exact division, floor division, and modulo operations safely.
+
+    Calculates (a / b, int(a // b), float(a % b)).
 
     Args:
-        None.
+        a: Dividend number.
+        b: Divisor number.
 
     Returns:
-        None.
+        tuple[float, int, float]: A 3-tuple containing (quotient, floor_quotient, remainder).
 
     Raises:
-        None.
+        TypeError: If a or b is not a number or is a boolean.
+        ValueError: If a or b is non-finite (NaN or Infinity).
+        ZeroDivisionError: If b is zero.
     """
-    print("1 + 2 * 5 =", 1 + 2 * 5)
-    print("(1 + 2) * 5 =", (1 + 2) * 5)
+    # Examples / Expected Behavior:
+    # safe_divide_and_modulo(7, 2) -> (3.5, 3, 1.0)
+    # safe_divide_and_modulo(10.0, 4.0) -> (2.5, 2, 2.0)
+    # safe_divide_and_modulo(5, 0) -> raises ZeroDivisionError ("divisor cannot be zero")
+    # safe_divide_and_modulo(5, "2") -> raises TypeError ("arguments must be numbers")
+    raise NotImplementedError("Implement me!")
 
-    pi = 3.141592653589793
-    print("1 / 2 * pi =", 1 / 2 * pi)
-    print("1 / (2 * pi) =", 1 / (2 * pi))
 
+def parse_and_scale_inputs(val1_str: str, val2_str: str, scale: int | float = 1.0) -> tuple[float, float]:
+    """Parse string representations of numbers, convert them to floats, and apply a scale factor.
 
-def conversion_examples() -> None:
-    """Demonstrate conversion from strings to numeric values.
+    Computes (float(val1_str) * scale, float(val2_str) * scale).
 
     Args:
-        None.
+        val1_str: String representation of first number.
+        val2_str: String representation of second number.
+        scale: Multiplicative scale factor. Defaults to 1.0.
 
     Returns:
-        None.
+        tuple[float, float]: A tuple of the two scaled floating-point numbers.
 
     Raises:
-        ValueError: If a hard-coded example cannot be converted.
+        TypeError: If val1_str or val2_str is not a string, or scale is not a number.
+        ValueError: If strings cannot be converted to floats or parsed values/scale are non-finite.
     """
-    age_text = "36"
-    rate_text = "2.75"
-
-    age = int(age_text)
-    rate = float(rate_text)
-
-    print("age:", age, type(age).__name__)
-    print("rate:", rate, type(rate).__name__)
-    print("age next year:", age + 1)
+    # Examples / Expected Behavior:
+    # parse_and_scale_inputs("36", "2.75", 2.0) -> (72.0, 5.5)
+    # parse_and_scale_inputs("10.5", "0.5") -> (10.5, 0.5)
+    # parse_and_scale_inputs("abc", "2.75") -> raises ValueError ("could not convert string to float")
+    # parse_and_scale_inputs(36, "2.75") -> raises TypeError ("inputs must be strings")
+    raise NotImplementedError("Implement me!")
 
 
-def gross_pay(hours: Real, rate: Real) -> float:
-    """Calculate basic gross pay without overtime.
+def calculate_gross_pay(
+    hours: int | float,
+    rate: int | float,
+    overtime_threshold: int | float = 40.0,
+    overtime_multiplier: int | float = 1.5,
+) -> float:
+    """Calculate gross pay with optional overtime calculation.
+
+    For hours <= overtime_threshold: pay = hours * rate.
+    For hours > overtime_threshold: pay = (threshold * rate) + ((hours - threshold) * rate * multiplier).
 
     Args:
         hours: Number of hours worked.
-        rate: Pay received for each hour worked.
+        rate: Hourly pay rate.
+        overtime_threshold: Standard hours before overtime applies. Defaults to 40.0.
+        overtime_multiplier: Rate multiplier for overtime hours. Defaults to 1.5.
 
     Returns:
-        Gross pay as a floating-point number.
+        float: Total gross pay formatted as a floating-point number.
 
     Raises:
-        TypeError: If either argument is not a real number or is a boolean.
-        ValueError: If either argument is non-finite or negative.
+        TypeError: If any parameter is not a number or is a boolean.
+        ValueError: If any parameter is non-finite or negative.
     """
-    if isinstance(hours, bool) or not isinstance(hours, Real):
-        raise TypeError("hours must be a real number")
-    if isinstance(rate, bool) or not isinstance(rate, Real):
-        raise TypeError("rate must be a real number")
-    if not isfinite(float(hours)) or not isfinite(float(rate)):
-        raise ValueError("hours and rate must be finite")
-    if hours < 0 or rate < 0:
-        raise ValueError("hours and rate cannot be negative")
-    return float(hours * rate)
+    # Examples / Expected Behavior:
+    # calculate_gross_pay(35, 10.0) -> 350.0
+    # calculate_gross_pay(45, 10.0) -> 475.0  (40*10 + 5*15)
+    # calculate_gross_pay(-1, 10.0) -> raises ValueError ("hours and rate cannot be negative")
+    # calculate_gross_pay(40, "10.0") -> raises TypeError ("arguments must be numbers")
+    raise NotImplementedError("Implement me!")
 
 
-def celsius_to_fahrenheit(celsius: Real) -> float:
-    """Convert a Celsius temperature to Fahrenheit.
+def celsius_to_fahrenheit(celsius: int | float) -> float:
+    """Convert a Celsius temperature to Fahrenheit using the linear formula F = (C * 9/5) + 32.
 
     Args:
         celsius: Temperature in degrees Celsius.
 
     Returns:
-        The equivalent temperature in degrees Fahrenheit.
+        float: Equivalent temperature in degrees Fahrenheit.
 
     Raises:
-        TypeError: If ``celsius`` is not a real number or is a boolean.
-        ValueError: If ``celsius`` is not finite.
+        TypeError: If celsius is not a number or is a boolean.
+        ValueError: If celsius is non-finite.
     """
-    if isinstance(celsius, bool) or not isinstance(celsius, Real):
-        raise TypeError("celsius must be a real number")
-    if not isfinite(float(celsius)):
-        raise ValueError("celsius must be finite")
-    return float((celsius * 9 / 5) + 32)
-
-
-def main() -> None:
-    """Run the demonstrations and their self-checks.
-
-    Args:
-        None.
-
-    Returns:
-        None.
-
-    Raises:
-        AssertionError: If an example produces an unexpected result.
-    """
-    print("== Types ==")
-    show_types()
-
-    print("\n== Arithmetic ==")
-    arithmetic_examples()
-
-    print("\n== Precedence ==")
-    precedence_examples()
-
-    print("\n== Conversion ==")
-    conversion_examples()
-
-    print("\n== Calculations ==")
-    print("gross pay:", gross_pay(35, 2.75))
-    print("temperature:", celsius_to_fahrenheit(0))
-
-    # Small self-checks for the examples.
-    assert gross_pay(35, 2.75) == 96.25
-    assert celsius_to_fahrenheit(0) == 32.0
-    assert celsius_to_fahrenheit(100) == 212.0
-    try:
-        gross_pay(-1, 2.75)
-    except ValueError:
-        pass
-    else:
-        raise AssertionError("negative hours should raise ValueError")
-    assert 17 / 2 == 8.5
-    assert 17 // 2 == 8
-    assert 17 % 2 == 1
-    print("\nAll checks passed.")
+    # Examples / Expected Behavior:
+    # celsius_to_fahrenheit(0) -> 32.0
+    # celsius_to_fahrenheit(100) -> 212.0
+    # celsius_to_fahrenheit(-40) -> -40.0
+    # celsius_to_fahrenheit("0") -> raises TypeError ("celsius must be a number")
+    raise NotImplementedError("Implement me!")
 
 
 if __name__ == "__main__":
-    main()
+    print("Exercise stubs for Session 2 loaded. Run tests via: python3 -m unittest Python/tests/test_02_variables.py")

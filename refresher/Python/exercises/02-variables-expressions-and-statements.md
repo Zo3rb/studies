@@ -1,124 +1,45 @@
 # Exercise 2 — Variables, Expressions, and Statements
 
-These exercises follow the PY4E lesson on variables, expressions, and
-statements.
+These exercises follow the PY4E lesson on variables, expressions, and statements, augmented with mathematical precision and edge-case boundary testing.
 
-Attempt each exercise before looking for a complete solution. You can use the
-Python interpreter to check individual expressions, but write the programs
-yourself.
+Attempt each exercise before looking for a complete solution. Write unit tests under `Python/tests/test_02_variables.py` to verify your implementation.
 
-## Exercise 2.1 — Name greeting
+## Exercise 2.1 — Type Analysis
 
-Write a program that uses `input` to ask for a name and then prints a greeting.
+Implement `analyze_numeric_types(values: list[Any]) -> list[tuple[str, str]]` to inspect heterogeneous lists of objects.
 
-Example:
+## Exercise 2.2 — Safe Division and Modulo
 
-```text
-Enter your name: Ada
-Hello Ada
+Implement `safe_divide_and_modulo(a: int | float, b: int | float) -> tuple[float, int, float]` calculating:
+- Exact quotient ($a / b$)
+- Floor quotient ($a \mathbin{//} b$)
+- Modulo remainder ($a \bmod b$)
+
+Raise `ZeroDivisionError` when $b = 0$, and `TypeError` when non-numeric inputs are provided.
+
+## Exercise 2.3 — String Parsing and Scaling
+
+Implement `parse_and_scale_inputs(val1_str: str, val2_str: str, scale: int | float = 1.0) -> tuple[float, float]` to convert numeric text inputs to float representations and apply a multiplicative scaling factor $v \cdot s$.
+
+## Exercise 2.4 — Gross Pay with Piecewise Overtime
+
+Implement `calculate_gross_pay(hours: int | float, rate: int | float, overtime_threshold: int | float = 40.0, overtime_multiplier: int | float = 1.5) -> float` implementing the piecewise linear pay function:
+
+$$f(h, r) = \begin{cases} h \cdot r & \text{if } 0 \le h \le 40 \\ 40 \cdot r + (h - 40) \cdot 1.5r & \text{if } h > 40 \end{cases}$$
+
+## Exercise 2.5 — Celsius to Fahrenheit Formula
+
+Implement `celsius_to_fahrenheit(celsius: int | float) -> float` converting temperature using the linear formula $F = (C \cdot \frac{9}{5}) + 32$.
+
+## Testing Checklist & Standard `unittest`
+
+Run standard unit tests via:
+```bash
+python3 -m unittest discover -s Python/tests
 ```
 
-Requirements:
-
-- Store the result of `input()` in a variable.
-- Print the greeting using the variable.
-- Do not hard-code the name.
-
-## Exercise 2.2 — Gross pay
-
-Write a program that asks for hours and rate per hour, then calculates gross
-pay.
-
-Example:
-
-```text
-Enter Hours: 35
-Enter Rate: 2.75
-Pay: 96.25
-```
-
-Requirements:
-
-- Convert hours to `float`.
-- Convert rate to `float`.
-- Multiply the two numeric values.
-- Do not implement overtime yet.
-
-## Exercise 2.3 — Predict types and values
-
-Without running the code first, predict the value and type of each expression:
-
-```python
-width = 17
-height = 12.0
-```
-
-```python
-width // 2
-width / 2.0
-height / 3
-1 + 2 * 5
-```
-
-Then verify your answers with Python and record the result.
-
-## Exercise 2.4 — Celsius conversion
-
-Write a program that asks for a Celsius temperature, converts it to Fahrenheit,
-and prints the result.
-
-Formula:
-
-```text
-Fahrenheit = Celsius * 9 / 5 + 32
-```
-
-Example:
-
-```text
-Enter Celsius temperature: 0
-Fahrenheit: 32.0
-```
-
-## Exercise 2.5 — Personal diagnostic
-
-Write a short program that stores:
-
-- your name;
-- the year you started learning programming;
-- your target weekly study hours.
-
-Print a short sentence containing all three values. Decide which values should
-be strings, integers, or floats, and explain why.
-
-## Self-check questions
-
-1. What type does `input()` return?
-2. Why does `"10" + "5"` produce `"105"` instead of `15`?
-3. What is the difference between `/` and `//`?
-4. What does `%` return?
-5. Why are parentheses useful in mathematical expressions?
-6. What error occurs when `int("hello")` runs?
-7. What is the difference between a syntax error and a semantic error?
-
-## Testing checklist
-
-For the calculation exercises, test:
-
-- normal positive values;
-- zero;
-- a decimal value;
-- a negative value;
-- input that is not numeric, if you add validation.
-
-Do not add complex error handling until the basic version works. First make the
-formula and types correct, then improve the user experience.
-
-## Next lesson
-
-After completing this exercise sheet, continue to conditional execution:
-
-- comparisons;
-- Boolean expressions;
-- `if`, `elif`, and `else`;
-- handling different cases in a program.
+For all calculation exercises, verify:
+- Normal positive inputs (happy path).
+- Boundary inputs (e.g. $h = 40.0$).
+- Decimal floating-point precision (`math.isclose` or `assertAlmostEqual`).
+- Invalid inputs (negative values, strings, `NaN`, `infinity`, zero divisor).
