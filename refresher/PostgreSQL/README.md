@@ -14,6 +14,10 @@ relational database, and the connection between databases and Python programs.
   - 📖 **Notes**: [01-intro-to-sql.md](file:///home/ali/Desktop/code/studies/refresher/PostgreSQL/notes/01-intro-to-sql.md) (Architecture, DDL, DML, DQL, 3VL, Maths & DSA Insights)
   - 💻 **Examples**: [01-intro-to-sql.sql](file:///home/ali/Desktop/code/studies/refresher/PostgreSQL/examples/01-intro-to-sql.sql) (Executable CRUD queries & expected output tables)
   - 🧪 **Exercises**: [01-intro-to-sql.md](file:///home/ali/Desktop/code/studies/refresher/PostgreSQL/exercises/01-intro-to-sql.md) (Autograder schema task, filtering, updates, & discussion)
+- **Week 2 (Data Relationships / `02-Database-Design-Many-to-Many.ppt`)**:
+  - 📖 **Notes**: [02-data-relationships.md](notes/02-data-relationships.md) (Keys, normalization, one-to-many, joins, and many-to-many)
+  - 💻 **Examples**: [02-data-relationships.sql](examples/02-data-relationships.sql) (Music catalog and student/course relationship demos)
+  - 🧪 **Exercises**: [02-data-relationships.md](exercises/02-data-relationships.md) (Schema design, joins, junction tables, and constraints)
 
 PG4E uses the `psql` command-line client in its examples and provides setup
 guidance for using a small course PostgreSQL server through PythonAnywhere.
@@ -23,19 +27,20 @@ Follow the current instructions on the
 ## Learning roadmap
 
 1. Relational databases, tables, rows, and columns
-2. PostgreSQL data types and table creation
-3. `SELECT`, `WHERE`, `ORDER BY`, and `LIMIT`
-4. `INSERT`, `UPDATE`, and `DELETE`
-5. Primary keys, foreign keys, and constraints
-6. Aggregation, `GROUP BY`, and `HAVING`
-7. Inner, left, and self joins
-8. Subqueries and common table expressions
-9. Views and reusable query interfaces
-10. Transactions and concurrency
-11. Indexes and `EXPLAIN`
-12. Python database access and parameterized queries
-13. Data loading, cleaning, and validation
-14. Advanced architecture and NoSQL concepts
+2. Data relationships, keys, normalization, and many-to-many junction tables
+3. PostgreSQL data types and table creation
+4. `SELECT`, `WHERE`, `ORDER BY`, and `LIMIT`
+5. `INSERT`, `UPDATE`, and `DELETE`
+6. Primary keys, foreign keys, and constraints
+7. Aggregation, `GROUP BY`, and `HAVING`
+8. Inner, left, and self joins
+9. Subqueries and common table expressions
+10. Views and reusable query interfaces
+11. Transactions and concurrency
+12. Indexes and `EXPLAIN`
+13. Python database access and parameterized queries
+14. Data loading, cleaning, and validation
+15. Advanced architecture and NoSQL concepts
 
 The course site notes that its advanced architecture material is transitioning
 from Elasticsearch toward Deno as of Fall 2025. We will use the current
@@ -102,10 +107,13 @@ Useful `psql` commands:
 
 ## Next checkpoint
 
-Understand and query this relationship:
+Understand and query these relationships:
 
 ```text
 customers (one) -------- (many) orders
+student  (many) -------- (many) course
+                 through member
 ```
 
-Then practice filtering, ordering, aggregation, and a join.
+Then practice filtering, ordering, aggregation, and joins with
+[02-data-relationships.sql](examples/02-data-relationships.sql).

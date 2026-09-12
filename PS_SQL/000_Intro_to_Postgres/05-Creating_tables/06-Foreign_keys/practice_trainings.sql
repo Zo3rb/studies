@@ -1,1 +1,0 @@
--- Write your training‑database SQL practice queries here
