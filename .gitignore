@@ -46,3 +46,5 @@ pip-wheel-metadata/
 
 # Ignore nested Git repositories
 **/.git/
+.github/skills/*
+skill-using.txt

@@ -1,1016 +1,1931 @@
-# 18-Month Sequential AI/ML Engineering Mastery Roadmap
+# MLOps / AI Platform Engineer Mastery Roadmap
 
-## Checklist Version (Week-by-Week) + Project Briefs + AI Agent Prompt
+A 12-Month, 3-Hours/Day Progressive Study Plan
+For a 1-year SWE targeting AWS-first MLOps / AI Platform Engineering
 
-**Target roles:**
+## Schedule & Learning Methodology
 
-- Primary: **AI Engineer / GenAI Developer**
-- Secondary: **ML Engineer**
-
-**Time commitment:** 15–20 hours/week  
-**Stack:** Python, Node.js, AWS, Docker, LangChain, vector DBs, ML frameworks
-
----
-
-## How to Use This Checklist
-
-- Each week has:
-  - ✅ Checkboxes for courses/modules to complete
-  - ✅ Checkboxes for coding exercises / problems
-  - ✅ A “Project / Deliverable” checkbox
-- Mark `[x]` when done.
-- If you miss a week, shift everything forward; don’t try to “catch up” by skipping.
-
----
-
-# Phase 0 (Week 0): Setup & Baseline
-
-## Week 0 – Setup & Python Refresh
-
-- [x] Install Python 3.11+, VS Code + Python extension, Node.js LTS, Docker Desktop.
-- [x] Create GitHub's studies repo sub folder `ai-ml-journey` with folders: `00-setup`, `01-math`, `03-ml`, `04-ai`, `projects` (Note: DSA solved in main repo `../DSA/`).
-- [x] Complete Python basics refresher (functions, modules, data structures).
-  - [x] Free: [Python for Everybody (Coursera)](https://www.coursera.org/specializations/python) – audit Weeks 1–3.
-- [ ] Learn Jupyter notebooks; create `eda-titanic.ipynb` with basic EDA.
-- [ ] Learn `numpy`, `pandas`, `matplotlib` basics via Kaggle Learn & Arabic YouTube tutorials (Mohamed Al Assaal / Elzero).
-- [x] Solve 5 easy DSA problems on LeetCode/HackerRank in Python (save in `../DSA/`).
-- [x] Write “My 18-month AI/ML goals” doc (roles, industries, salary, remote).
-
-**Deliverable:**
-
-- [ ] `00-setup/` with scripts + `eda-titanic.ipynb` + goals doc pushed to GitHub.
+- Weekly budget: 6 days/week (Sat–Thu), 3 hours/day = 18 hours/week
+- Daily rhythm:
+  - Saturday: concept mastery + theory
+  - Sunday: lab + guided practice
+  - Monday: deeper concept review
+  - Tuesday: implementation + exercises
+  - Wednesday: build day 1
+  - Thursday: build day 2
+  - Friday: rest + review + notes
+- Learning philosophy:
+  - Learn the platform concept
+  - Build the feature or service
+  - Deploy it locally or on cloud
+  - Observe, debug, and improve it
+- Resource priority:
+  1. Free Arabic-first resources if available
+  2. Official docs and free English resources
+  3. Hands-on labs and small projects
+  4. Deep reading only after building a working system
 
 ---
 
-# Phase 1: Math Foundations (Weeks 1–16)
+## Target Role & Stack
 
-## Course 1.1 – Linear Algebra for ML (Weeks 1–6)
+This plan is optimized for:
 
-### Week 1 – Vectors & Basic Operations
+- 1-year SWE
+- full-time job schedule
+- AWS-first cloud focus
+- Python as main language
+- strong emphasis on platform engineering, deployment, observability, infrastructure automation, model serving, and AI reliability
 
-- [ ] Khan Academy: Vectors, vector addition, scalar multiplication.
-- [ ] Khan Academy: Dot product.
-- [ ] Watch 3Blue1Brown – Essence of Linear Algebra #1–3.
-- [ ] Implement vector operations in numpy (add, scale, dot).
-- [ ] Write short notes: geometric meaning of dot product.
+Primary stack:
 
-**Deliverable:**
+- Python, Linux, Git
+- TypeScript + JavaScript fundamentals
+- React + React Native / Expo
+- Node.js + Express + MongoDB (MERN layer)
+- FastAPI
+- Docker + Docker Compose
+- PostgreSQL + Redis
+- AWS: EC2, IAM, VPC, S3, EKS
+- Terraform
+- Kubernetes (k3d or Minikube)
+- GitHub Actions
+- Prometheus + Grafana
+- MLflow
+- vLLM / model serving
+- Qdrant / vector search
+- LangChain / RAG basics
 
-- [ ] `01-math/linear-algebra/week1-vectors.ipynb` committed.
+Supporting modern developer layer (recommended for full-stack + platform roles):
 
-### Week 2 – Matrices & Transformations
-
-- [ ] Khan Academy: Matrices, matrix addition, multiplication, transpose.
-- [ ] Watch 3Blue1Brown #4–6 (linear transformations).
-- [ ] Implement matrix operations in numpy.
-- [ ] Visualize 2D transformations (rotate/scale a square).
-
-**Deliverable:**
-
-- [ ] `week2-matrices.ipynb` with code + plots.
-
-### Week 3 – Systems of Equations
-
-- [ ] Khan Academy: Solving systems of equations.
-- [ ] Use `np.linalg.solve` on small systems.
-- [ ] Write notes linking systems to ML (e.g., linear regression normal equation).
-
-**Deliverable:**
-
-- [ ] `week3-systems.ipynb`.
-
-### Week 4 – Determinants & Inverses
-
-- [ ] Khan Academy: Determinants, inverse matrices (conceptual).
-- [ ] Compute determinants/inverses in numpy; interpret geometrically.
-
-**Deliverable:**
-
-- [ ] `week4-determinants-inverses.ipynb`.
-
-### Week 5 – Eigenvalues & Eigenvectors (Intuition)
-
-- [ ] Khan Academy: Eigenvalues/eigenvectors (focus on intuition).
-- [ ] Watch 3Blue1Brown #14–15.
-- [ ] Compute eigenvalues/eigenvectors in numpy for simple matrices.
-
-**Deliverable:**
-
-- [ ] `week5-eigen.ipynb`.
-
-### Week 6 – Project: Linear Algebra in Action
-
-- [ ] Build **Image Transformer Toy**:
-  - [ ] Represent 2D points as vectors.
-  - [ ] Apply matrix transformations (rotation, scaling, shear).
-  - [ ] Expose via simple API (FastAPI or Node/Express) + minimal UI.
-- [ ] Write README explaining the math and how to run.
-
-**Deliverable:**
-
-- [ ] `projects/image-transformer-toy/` repo with code + README.
+- TypeScript syntax, interfaces, generics, strict mode
+- React fundamentals: hooks, state, props, component design
+- React Native / Expo: navigation, device APIs, mobile UI patterns
+- MERN stack: Express APIs, MongoDB, CRUD patterns, auth basics
+- Full-stack integration patterns for APIs, frontend state, and deployment
 
 ---
 
-## Course 1.2 – Probability & Statistics for ML (Weeks 7–12)
+## 4 Production-Grade Capstone Projects
 
-### Week 7 – Basic Probability
-
-- [ ] Khan Academy: Events, sample space, addition/multiplication rules.
-- [ ] StatQuest: Probability basics videos.
-- [ ] Simulate coin flips/dice in Python; compare empirical vs theoretical probabilities.
-
-**Deliverable:**
-
-- [ ] `01-math/probability-stats/week7-probability.ipynb`.
-
-### Week 8 – Conditional Probability & Bayes
-
-- [ ] Khan Academy: Conditional probability, independence.
-- [ ] Khan Academy: Bayes’ theorem.
-- [ ] Implement a simple Bayesian update example (e.g., disease test).
-
-**Deliverable:**
-
-- [ ] `week8-bayes.ipynb`.
-
-### Week 9 – Random Variables & Distributions
-
-- [ ] Khan Academy: Random variables, discrete vs continuous.
-- [ ] Khan Academy: Common distributions (normal, binomial, uniform).
-- [ ] Sample from distributions using numpy; plot histograms.
-
-**Deliverable:**
-
-- [ ] `week9-distributions.ipynb`.
-
-### Week 10 – Descriptive Statistics
-
-- [ ] Khan Academy: Mean, median, mode, variance, std dev, percentiles.
-- [ ] Compute stats on a dataset (e.g., housing prices) with pandas.
-
-**Deliverable:**
-
-- [ ] `week10-descriptive-stats.ipynb`.
-
-### Week 11 – Correlation & Basic Inference
-
-- [ ] Khan Academy: Correlation, covariance (intuition).
-- [ ] Khan Academy: Confidence intervals, hypothesis testing (conceptual).
-- [ ] Compute correlations, run simple hypothesis tests with scipy.
-
-**Deliverable:**
-
-- [ ] `week11-correlation-inference.ipynb`.
-
-### Week 12 – Project: EDA + Probability Dashboard
-
-- [ ] Choose a dataset (fintech transactions or health data).
-- [ ] Perform EDA: distributions, correlations, outliers.
-- [ ] Implement simple probability models (e.g., probability of high-value transaction).
-- [ ] Build a small dashboard (Streamlit or Node + React) showing:
-  - [ ] Histograms, box plots
-  - [ ] Summary stats
-  - [ ] Interactive filters
-- [ ] Write README with insights.
-
-**Deliverable:**
-
-- [ ] `projects/eda-probability-dashboard/`.
+```text
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                 4 PRODUCTION-STYLE CAPSTONE PROJECTS                        │
+└─────────────────────────────────────────────────────────────────────────────┘
+  CAPSTONE 1 (Month 3):  Python + FastAPI + PostgreSQL + Redis platform service
+  CAPSTONE 2 (Month 6):  ML training + model serving + MLflow + Docker pipeline
+  CAPSTONE 3 (Month 9):  GenAI / RAG service with Qdrant + vLLM + gateway design
+  CAPSTONE 4 (Month 12): AI Platform project on AWS/Kubernetes with CI/CD + monitoring
+```
 
 ---
 
-## Course 1.3 – Calculus for ML (Weeks 13–16)
+## Practical Weekly Execution Tracker
 
-### Week 13 – Derivatives & Intuition
+Use this template every week.
 
-- [ ] Khan Academy: Derivatives as rate of change, basic rules.
-- [ ] Watch 3Blue1Brown – Essence of Calculus #1–3.
-- [ ] Implement numerical derivative (finite difference) for simple functions; plot.
+### Weekly goal
 
-**Deliverable:**
+- [ ] Main topic for the week:
+- [ ] Lab completed:
+- [ ] Project output completed:
+- [ ] One gap I need to revisit next week:
+- [ ] One skill I can explain out loud without notes:
 
-- [ ] `01-math/calculus/week13-derivatives.ipynb`.
+### Daily checklist (Sat–Thu)
 
-### Week 14 – Chain Rule & Gradients
+- [ ] Saturday: Learn the concept + watch 1–2 focused videos / read 1 article
+- [ ] Sunday: Do the lab + write short notes + 1 practical exercise
+- [ ] Monday: Deepen the concept + revise confusing parts
+- [ ] Tuesday: Build a small implementation or mini-project
+- [ ] Wednesday: Build Day 1 — main project work
+- [ ] Thursday: Build Day 2 — finish + document + test
+- [ ] Friday: Review + note what was learned + rest
 
-- [ ] Khan Academy: Chain rule, basic applications.
-- [ ] Watch 3Blue1Brown #4–6.
-- [ ] Compute gradients for simple multivariable functions numerically.
+### Weekly project checkpoint
 
-**Deliverable:**
+- [ ] Did I build something real this week?
+- [ ] Did I deploy or run it locally?
+- [ ] Did I document what I built?
+- [ ] Did I check my outputs against the role target?
 
-- [ ] `week14-chain-rule-gradients.ipynb`.
+### Modern developer support track (lightweight, not separate priority)
 
-### Week 15 – Gradient Descent Intuition
+Keep this to 1–2 focused sessions per week, only after the main MLOps task is done.
 
-- [ ] Read short articles/blogs on gradient descent for ML.
-- [ ] Implement gradient descent for minimizing a 1D quadratic function.
-- [ ] Plot convergence.
+- [ ] TypeScript fundamentals: variables, types, interfaces, generics, strict mode
+- [ ] React basics: props, state, hooks, forms, API integration
+- [ ] React Native / Expo basics: navigation, components, mobile UI patterns
+- [ ] MERN basics: Express, MongoDB CRUD, auth concepts
 
-**Deliverable:**
-
-- [ ] `week15-gradient-descent.ipynb`.
-
-### Week 16 – Project: Linear Regression from Scratch
-
-- [ ] Implement univariate & multivariate linear regression using:
-  - [ ] Closed-form solution (normal equation)
-  - [ ] Gradient descent
-- [ ] Use numpy only (no scikit-learn).
-- [ ] Evaluate on a real dataset (e.g., housing prices).
-- [ ] Visualize cost function convergence.
-- [ ] Write README with math derivations and code explanation.
-
-**Deliverable:**
-
-- [ ] `projects/linear-regression-from-scratch/`.
+This support layer should be treated as a booster for understanding modern product architecture. It is not the main focus.
 
 ---
 
-# Phase 2: DSA Foundations (Weeks 17–28)
+# Phase 0: Foundation Reset (Weeks 1–4)
 
-## Course 2.1 – DSA Fundamentals (Weeks 17–24)
+Goal: solidify Python, Git, Linux, and software engineering habits before platform work.
 
-Use: [NeetCode Roadmap](https://neetcode.io/roadmap) + LeetCode.
+## Week 1 – Python basics + environment setup
 
-### Week 17 – Arrays & Strings
+### Saturday
 
-- [ ] Study patterns: two pointers, sliding window, prefix sums.
-- [ ] Solve 8–10 problems (easy/medium) on arrays/strings.
+- Topic: Python basics (variables, types, functions, strings, mutability)
+- Focus:
+  - Python syntax
+  - functions and parameters
+  - data types and references
+- Free resources:
+  - Arabic: free Arabic Python explainers on YouTube
+  - English: [Python Official Tutorial](https://docs.python.org/3/tutorial/), [freeCodeCamp](https://www.freecodecamp.org/), [Corey Schafer](https://www.youtube.com/@Coreyms)
+- Lab:
+  - create a script that reads a CSV file and prints summary stats
+- Deliverable:
+  - repository with a simple data processing script
 
-**Deliverable:**
+### Sunday
 
-- [ ] `02-dsa/arrays-strings/` with solutions.
+- Topic: conditionals, loops, comprehensions, scope
+- Lab:
+  - build a mini transaction parsing script
 
-### Week 18 – Hash Maps & Sets
+### Monday
 
-- [ ] Study frequency counting, two-sum patterns.
-- [ ] Solve 8–10 problems.
+- Topic: dictionaries, sets, lists, and hash behavior
+- Focus:
+  - lookup speed vs list scanning
+- Lab:
+  - build a small lookup/indexing utility
 
-**Deliverable:**
+### Tuesday
 
-- [ ] `02-dsa/hash-maps/`.
+- Topic: file I/O, JSON, CSV, exceptions, logging
+- Lab:
+  - parse JSON/CSV input and log errors cleanly
 
-### Week 19 – Linked Lists
+### Wednesday – Build Day 1
 
-- [ ] Implement singly/doubly linked list in Python.
-- [ ] Solve 6–8 problems (reverse, cycle detection, etc.).
+- Project: create a small Python CLI tool
+- Functionality:
+  - read input files
+  - validate rows
+  - summarize data
+  - log warnings/errors
 
-**Deliverable:**
+### Thursday – Build Day 2
 
-- [ ] `02-dsa/linked-lists/`.
+- Improve the CLI:
+  - unit tests
+  - README
+  - file-based output
+  - clean script structure
 
-### Week 20 – Stacks & Queues
+### Friday
 
-- [ ] Study valid parentheses, monotonic stacks, BFS-style queues.
-- [ ] Solve 6–8 problems.
-
-**Deliverable:**
-
-- [ ] `02-dsa/stacks-queues/`.
-
-### Week 21 – Binary Trees & BST
-
-- [ ] Implement binary tree & BST classes.
-- [ ] Study traversals (inorder, preorder, postorder).
-- [ ] Solve 8–10 problems.
-
-**Deliverable:**
-
-- [ ] `02-dsa/trees/`.
-
-### Week 22 – Heaps & Priority Queues
-
-- [ ] Study top-k elements, merging intervals.
-- [ ] Solve 6–8 problems.
-
-**Deliverable:**
-
-- [ ] `02-dsa/heaps/`.
-
-### Week 23 – Graphs (BFS/DFS)
-
-- [ ] Study representations, BFS, DFS, connected components.
-- [ ] Solve 8–10 graph problems.
-
-**Deliverable:**
-
-- [ ] `02-dsa/graphs/`.
-
-### Week 24 – Sorting, Searching, Recursion, DP Basics
-
-- [ ] Study binary search, quick/merge sort (concept), recursion patterns, basic DP.
-- [ ] Solve 8–10 mixed problems.
-
-**Deliverable:**
-
-- [ ] `02-dsa/sorting-searching-dp/`.
+- Rest + recap notes
 
 ---
 
-## Course 2.2 – DSA Integration & Mock Interviews (Weeks 25–28)
+## Week 2 – OOP, clean architecture, and testing
 
-### Week 25 – Mixed Problem Solving (Arrays, Strings, Hash Maps)
+### Saturday
 
-- [ ] Solve 2–3 problems/day from NeetCode 150 (focus on these topics).
+- Topic: classes, methods, constructors, encapsulation
+- Lab:
+  - create a `Transaction` model and a small parser
 
-**Deliverable:**
+### Sunday
 
-- [ ] Updated LeetCode profile + notes.
+- Topic: inheritance, polymorphism, abstract classes
+- Focus:
+  - why interfaces matter in real systems
 
-### Week 26 – Trees, Graphs, Heaps
+### Monday
 
-- [ ] 2–3 problems/day focused on trees, graphs, heaps.
+- Topic: functional programming basics
+- Learn:
+  - lambdas, map, filter, list comprehensions
+- Lab:
+  - transform data cleanly using pure functions
 
-**Deliverable:**
+### Tuesday
 
-- [ ] Notes on patterns & mistakes.
+- Topic: pytest and professional testing habits
+- Focus:
+  - assertions, edge cases, fixtures
 
-### Week 27 – DP, Backtracking, Advanced Graphs
+### Wednesday – Build Day 1
 
-- [ ] 2–3 problems/day, including some medium/hard.
+- Refactor the CLI into class-based architecture
+- Classes likely to include:
+  - `DataLoader`
+  - `Validator`
+  - `Processor`
+  - `Reporter`
 
-**Deliverable:**
-
-- [ ] List of “hard patterns” and how you’re tackling them.
-
-### Week 28 – Mock Interviews & Review
-
-- [ ] Do 2–3 mock interviews (Pramp, interviewing.io, or a friend).
-- [ ] Review weak areas; re-solve problematic patterns.
-
-**Deliverable:**
-
-- [ ] LeetCode/NeetCode profile with 120–150 solved problems.
-
----
-
-# Phase 3: Core Machine Learning (Weeks 29–44)
-
-## Course 3.1 – Machine Learning Fundamentals (Weeks 29–36)
-
-Primary: [Andrew Ng – ML (Coursera)](https://www.coursera.org/learn/machine-learning) (audit)  
-Supplement: [Hands-On ML notebooks](https://github.com/ageron/handson-ml2)
-
-### Week 29 – Linear Regression & Gradient Descent
-
-- [ ] Andrew Ng: Weeks 1–2 (linear regression, gradient descent).
-- [ ] Implement linear regression with gradient descent in numpy.
-- [ ] Compare with scikit-learn’s implementation.
-
-**Deliverable:**
-
-- [ ] `03-ml/ml-fundamentals/week29-linear-regression.ipynb`.
-
-### Week 30 – Logistic Regression & Classification
-
-- [ ] Andrew Ng: Logistic regression, classification, cost function.
-- [ ] Implement logistic regression from scratch (numpy).
-- [ ] Evaluate on a binary classification dataset.
-
-**Deliverable:**
-
-- [ ] `week30-logistic-regression.ipynb`.
-
-### Week 31 – Regularization & Model Selection
-
-- [ ] Andrew Ng: Overfitting, regularization (L1/L2).
-- [ ] Use Ridge/Lasso in scikit-learn; compare models.
-
-**Deliverable:**
-
-- [ ] `week31-regularization.ipynb`.
-
-### Week 32 – Neural Networks Basics
-
-- [ ] Andrew Ng: Neural networks intuition.
-- [ ] Build a simple MLP in PyTorch for MNIST or similar.
-
-**Deliverable:**
-
-- [ ] `week32-mlp-pytorch.ipynb`.
-
-### Week 33 – Practical ML with scikit-learn
-
-- [ ] Hands-On ML: End-to-end ML project chapters.
-- [ ] Build end-to-end project on a tabular dataset.
-
-**Deliverable:**
-
-- [ ] `week33-end-to-end-ml.ipynb`.
-
-### Week 34 – Decision Trees, Ensembles
-
-- [ ] Hands-On ML: Decision trees, random forests, boosting.
-- [ ] Train RF, XGBoost/LightGBM on a Kaggle dataset.
-
-**Deliverable:**
-
-- [ ] `week34-ensembles.ipynb`.
-
-### Week 35 – Unsupervised Learning
-
-- [ ] Hands-On ML: Clustering (k-means), PCA.
-- [ ] Customer segmentation project using clustering.
-- [ ] PCA on a dataset (e.g., MNIST digits, visualize 2D).
-
-**Deliverable:**
-
-- [ ] `week35-unsupervised.ipynb`.
-
-### Week 36 – Project: End-to-End ML System
-
-- [ ] Choose domain (fintech or health).
-- [ ] Build:
-  - [ ] EDA
-  - [ ] Feature engineering
-  - [ ] Multiple models (logistic regression, RF, XGBoost, MLP)
-  - [ ] Proper evaluation (ROC-AUC, PR curves)
-- [ ] Deploy as a service (FastAPI + Docker).
-- [ ] Write README with methodology, results, how to run.
-
-**Deliverable:**
-
-- [ ] `projects/end-to-end-ml-system/`.
-
----
-
-## Course 3.2 – MLOps & Production ML (Weeks 37–44)
-
-Primary: [Full Stack Deep Learning](https://fullstackdeeplearning.com/) + [MLflow tutorials](https://mlflow.org/docs/latest/tutorials-and-examples/index.html)
-
-### Week 37 – ML Pipelines & Experiment Tracking
-
-- [ ] Learn ML pipelines, experiment tracking concepts.
-- [ ] Integrate MLflow or W&B into your previous ML project.
-
-**Deliverable:**
-
-- [ ] `03-ml/mlops/week37-tracking/`.
-
-### Week 38 – Model Registry & Versioning
-
-- [ ] Learn model registries, versioning, staging.
-- [ ] Use MLflow Model Registry to register models.
-
-**Deliverable:**
-
-- [ ] `week38-model-registry/`.
-
-### Week 39 – Model Serving Patterns
-
-- [ ] Learn batch vs real-time serving, model APIs.
-- [ ] Serve a model with FastAPI + pickle/joblib.
-- [ ] Add logging (latency, predictions).
-
-**Deliverable:**
-
-- [ ] `week39-model-serving/`.
-
-### Week 40 – CI/CD for ML
-
-- [ ] Learn CI/CD basics for ML.
-- [ ] Add GitHub Actions CI to your ML project (run tests).
-
-**Deliverable:**
-
-- [ ] `.github/workflows/ml-ci.yml` + updated project.
-
-### Week 41 – Monitoring & Drift Detection
-
-- [ ] Learn model monitoring, data drift, concept drift.
-- [ ] Use Evidently AI (or similar) to detect drift.
-
-**Deliverable:**
-
-- [ ] `week41-drift-detection/`.
-
-### Week 42 – Data Engineering for ML (ETL/ELT)
-
-- [ ] Learn ETL/ELT concepts, feature stores (high level).
-- [ ] Build a simple Airflow/Dagster DAG:
-  - [ ] Extract data from an API/CSV
-  - [ ] Transform it
-  - [ ] Load into a DB for training
-
-**Deliverable:**
-
-- [ ] `week42-etl-dag/`.
-
-### Week 43 – Advanced MLOps Patterns
-
-- [ ] Learn A/B testing for models, canary deployments (conceptual).
-- [ ] Read case studies/blogs on MLOps in production.
-
-**Deliverable:**
-
-- [ ] Notes + links to 3–5 good articles.
-
-### Week 44 – Project: ML System with MLOps
-
-- [ ] Enhance your previous ML project:
-  - [ ] Full experiment tracking
-  - [ ] Model registry
-  - [ ] Serving API
-  - [ ] CI/CD
-  - [ ] Basic monitoring/drift detection
-- [ ] Write a system design doc (architecture, trade-offs).
-
-**Deliverable:**
-
-- [ ] `projects/ml-system-with-mlops/`.
-
----
-
-# Phase 4: AI Engineering – LLMs, RAG, Agents (Weeks 45–68)
-
-## Course 4.1 – LLM Fundamentals & Prompt Engineering (Weeks 45–50)
-
-Primary: [DeepLearning.AI – Generative AI courses](https://www.deeplearning.ai/courses/) (audit) + [LangChain docs](https://python.langchain.com/)
-
-### Week 45 – How LLMs Work (High Level)
-
-- [ ] Learn tokens, embeddings, attention (conceptual).
-- [ ] Read high-level blog posts on transformer architecture.
-
-**Deliverable:**
-
-- [ ] `04-ai/llm-fundamentals/week45-llm-basics.md`.
-
-### Week 46 – Using LLM APIs
-
-- [ ] Set up OpenAI/Anthropic (or open-source via HF).
-- [ ] Implement simple completions, chat completions.
-- [ ] Build a CLI chatbot.
-
-**Deliverable:**
-
-- [ ] `week46-llm-api-chatbot/`.
-
-### Week 47 – Prompt Engineering Basics
-
-- [ ] Learn zero-shot, few-shot, CoT, ReAct.
-- [ ] Experiment with prompts for summarization, classification, Q&A.
-
-**Deliverable:**
-
-- [ ] `week47-prompt-experiments.ipynb`.
-
-### Week 48 – LangChain Basics
-
-- [ ] Learn models, prompts, chains, memory.
-- [ ] Build:
-  - [ ] A Q&A chain over a document
-  - [ ] A chatbot with memory
-
-**Deliverable:**
-
-- [ ] `week48-langchain-examples/`.
-
-### Week 49 – Advanced Prompt Patterns
-
-- [ ] Learn structured outputs, tool-use prompts, function calling.
-- [ ] Build prompts that output JSON, call “tools” (simulated).
-
-**Deliverable:**
-
-- [ ] `week49-advanced-prompts/`.
-
-### Week 50 – Project: LLM-Powered Feature
-
-- [ ] Build **Support Ticket Summarizer**:
-  - [ ] Input: list of support tickets (text).
-  - [ ] Output: summaries, categories, sentiment.
-  - [ ] Use LLM API + LangChain.
-  - [ ] Expose via API + simple UI.
-- [ ] Write README with architecture.
-
-**Deliverable:**
-
-- [ ] `projects/ticket-summarizer-service/`.
-
----
-
-## Course 4.2 – RAG & Vector Databases (Weeks 51–58)
-
-Primary: [LangChain – RAG tutorials](https://python.langchain.com/docs/use_cases/question_answering/) + [LlamaIndex docs](https://docs.llamaindex.ai/)
-
-### Week 51 – Embeddings & Similarity Search
-
-- [ ] Learn text embeddings, cosine similarity.
-- [ ] Embed documents; implement similarity search in numpy.
-
-**Deliverable:**
-
-- [ ] `04-ai/rag/week51-embeddings.ipynb`.
-
-### Week 52 – Vector Databases
-
-- [ ] Set up Pinecone free tier, Qdrant local, or `pgvector` (PostgreSQL vector extension).
-- [ ] Index a small corpus; implement retrieval.
-
-**Deliverable:**
-
-- [ ] `week52-vector-db/`.
-
-### Week 53 – RAG Basics
-
-- [ ] Learn RAG architecture.
-- [ ] Implement basic RAG with LangChain/LlamaIndex.
-
-**Deliverable:**
-
-- [ ] `week53-rag-basic/`.
-
-### Week 54 – Chunking & Metadata Filtering
-
-- [ ] Learn chunking strategies, metadata usage.
-- [ ] Improve your RAG system with better chunking/filtering.
-
-**Deliverable:**
-
-- [ ] `week54-rag-chunking/`.
-
-### Week 55 – Hybrid Search & Re-ranking
-
-- [ ] Learn keyword + vector search, re-ranking strategies.
-- [ ] Implement hybrid search in your RAG pipeline.
-
-**Deliverable:**
-
-- [ ] `week55-hybrid-search/`.
-
-### Week 56 – RAG Evaluation
-
-- [ ] Learn relevance, faithfulness, answer quality metrics.
-- [ ] Build a simple evaluation harness.
-
-**Deliverable:**
-
-- [ ] `week56-rag-eval/`.
-
-### Week 57 – Guardrails & Safety
-
-- [ ] Learn input/output validation, PII detection, safety filters.
-- [ ] Add guardrails to your RAG system.
-
-**Deliverable:**
-
-- [ ] `week57-guardrails/`.
-
-### Week 58 – Project: Domain-Specific RAG Assistant
-
-- [ ] Choose domain: **Health** or **Fintech**.
-- [ ] Build:
-  - [ ] Health Knowledge Assistant (WHO/CDC guidelines)  
-         OR
-  - [ ] Fintech Policy/FAQ Bot.
-- [ ] Include indexing, RAG, evaluation, guardrails, API + UI.
-- [ ] Write README with architecture & limitations.
-
-**Deliverable:**
-
-- [ ] `projects/domain-rag-assistant/`.
-
----
-
-## Course 4.3 – Agents & Agentic Workflows (Weeks 59–66)
-
-Primary: [LangGraph docs](https://langchain-ai.github.io/langgraph/) + [AutoGen](https://microsoft.github.io/autogen/) + [CrewAI](https://docs.crewai.com/)
-
-### Week 59 – Tool Use Patterns
-
-- [ ] Learn giving LLMs access to functions/tools.
-- [ ] Build a simple agent that uses tools (calculator, DB query).
-
-**Deliverable:**
-
-- [ ] `04-ai/agents/week59-tool-use/`.
-
-### Week 60 – Single-Agent Workflows
-
-- [ ] Learn planning, reflection, multi-step reasoning.
-- [ ] Enhance agent with memory and multi-step tasks.
-
-**Deliverable:**
-
-- [ ] `week60-single-agent/`.
-
-### Week 61 – Multi-Agent Systems
-
-- [ ] Learn multi-agent orchestration (CrewAI, AutoGen).
-- [ ] Build a simple multi-agent workflow (researcher + writer).
-
-**Deliverable:**
-
-- [ ] `week61-multi-agent/`.
-
-### Week 62 – Agentic Patterns for Real Apps
-
-- [ ] Learn real-world patterns (support agent, data analyst agent).
-- [ ] Read case studies/blogs on agentic systems in production.
-
-**Deliverable:**
-
-- [ ] Notes + 3–5 article links.
-
-### Week 63 – Project: Personal Finance Assistant Agent
-
-- [ ] Connect to mock transaction data.
-- [ ] Agent can:
-  - [ ] Summarize spending
-  - [ ] Answer questions (“How much on food last month?”)
-- [ ] Use tools for DB queries and calculations.
-- [ ] API + UI.
-
-**Deliverable:**
-
-- [ ] `projects/finance-assistant-agent/`.
-
-### Week 64 – Project: Health Triage Assistant (Informational Only)
-
-- [ ] Ask symptom-related questions.
-- [ ] Retrieve relevant guidelines via RAG.
-- [ ] Provide general guidance with clear disclaimers.
-
-**Deliverable:**
-
-- [ ] `projects/health-triage-assistant/`.
-
-### Week 65 – Production Patterns for Agents
-
-- [ ] Learn rate limiting, cost control, monitoring for agents.
-- [ ] Add logging, tracing, basic metrics to your agent.
-
-**Deliverable:**
-
-- [ ] Enhanced agent repo with observability.
-
-### Week 66 – Project: Capstone Agentic System
-
-- [ ] Combine RAG + agents + tools.
-- [ ] Example: Fintech compliance assistant or health info assistant.
-- [ ] Containerize with Docker.
-- [ ] Add CI/CD (GitHub Actions).
-- [ ] Write system design doc.
-
-**Deliverable:**
-
-- [ ] `projects/capstone-agentic-system/`.
-
----
-
-# Phase 5: Specialization, Portfolio Polish, Job Hunt (Weeks 67–72+)
-
-### Weeks 67–70 – Deepen Your Chosen Track
-
-- [ ] Choose:
-  - [ ] AI Engineer depth (advanced RAG, multi-tenant AI, cost/latency optimization)  
-         OR
-  - [ ] ML Engineer depth (fine-tuning LLMs, deeper MLOps, rigorous evaluation).
-- [ ] Build 1–2 substantial projects in that track.
-
-**Deliverable:**
-
-- [ ] 1–2 new project repos with strong READMEs.
-
-### Weeks 71–74 – Portfolio Polish & Brand Building
-
-- [ ] Refine READMEs for all major projects.
-- [ ] Write 3–5 blog posts (LinkedIn/Medium/Dev.to):
-  - [ ] How you built your RAG system
-  - [ ] Lessons from productionizing AI
-  - [ ] Math-for-ML insights
-- [ ] Ensure GitHub is clean and organized.
-
-**Deliverable:**
-
-- [ ] Updated GitHub + 3–5 published posts.
-
-### Weeks 75–78 – Job Hunt Preparation
-
-- [ ] Tailor CV:
-  - [ ] Highlight back-end + AI/ML projects.
-  - [ ] Use keywords: LLM, RAG, LangChain, vector DB, MLOps, AWS, Docker.
-- [ ] Update LinkedIn:
-  - [ ] Headline: “Back-End Engineer → AI/ML Engineer (LLMs, RAG, MLOps)”.
-  - [ ] Post project write-ups.
-- [ ] Apply to:
-  - [ ] AI Engineer / GenAI Developer / LLM Engineer
-  - [ ] ML Engineer (with GenAI/LLM focus)
-  - [ ] Back-End roles with AI features
-- [ ] Target healthtech & fintech companies.
-
-**Deliverable:**
-
-- [ ] Updated CV + LinkedIn + at least 10 applications sent.
-
----
-
-# Project Briefs (Health & Fintech)
-
-Use these as concrete specifications for your portfolio projects. Each brief includes:
-
-- Goal
-- Datasets/APIs
-- Core features
-- Stretch goals
-- Tech suggestions
-- Evaluation criteria
-
----
-
-## Project Brief 1 – Health Knowledge RAG Assistant
-
-**Goal:**  
-Build a retrieval-augmented generation (RAG) assistant that answers general health questions using authoritative guidelines (not for diagnosis).
-
-**Datasets / Sources:**
-
-- Public health guidelines:
-  - [WHO guidelines](https://www.who.int/publications)
-  - [CDC guidelines](https://www.cdc.gov/)
-- Optional (if you can get access):
-  - [MIMIC-III notes](https://physionet.org/content/mimiciii/1.4/) – for advanced NLP experiments (requires credentialing).
-
-**Core Features:**
-
-- Ingest documents:
-  - Scrape or download PDFs/HTML from WHO/CDC.
-  - Convert to text, chunk with metadata (source, section, date).
-- RAG pipeline:
-  - Embed chunks (e.g., `text-embedding-3-small` or open-source embeddings).
-  - Store in vector DB (Pinecone/Qdrant/pgvector).
-  - At query time: retrieve top-k chunks, build prompt, call LLM.
-- API + UI:
-  - FastAPI or Node/Express backend.
-  - Simple React or Streamlit UI.
-  - Input: user question.
-  - Output: answer + citations (links to source sections).
-- Guardrails:
-  - Clear disclaimer: “Not for medical diagnosis or treatment.”
-  - Basic safety filter: refuse to answer high-risk diagnostic queries with a safe canned response.
-
-**Stretch Goals:**
+### Thursday – Build Day 2
 
 - Add:
-  - Hybrid search (keyword + vector).
-  - Re-ranking of retrieved chunks.
-  - Evaluation harness:
-    - Manually label 20–30 Q&A pairs with “good/bad” answers.
-    - Compute simple metrics (e.g., % good answers).
+  - tests
+  - typed functions
+  - logging
+  - clean project layout
 
-**Tech Suggestions:**
+### Friday
 
-- Backend: Python + FastAPI
-- LLM: OpenAI/Anthropic or open-source via HF
-- Vector DB: Qdrant (local) or Pinecone (free tier)
-- Frontend: React or Streamlit
-
-**Evaluation Criteria:**
-
-- Answers are:
-  - Relevant to the question.
-  - Grounded in retrieved guidelines (citations match).
-  - Safe (no diagnostic claims, proper disclaimers).
-- System is:
-  - Deployed (Dockerized, running locally or on a cheap cloud instance).
-  - Documented (README with architecture diagram, how to run, limitations).
+- Rest + review + commit history check
 
 ---
 
-## Project Brief 2 – Fintech Fraud Detection ML System with MLOps
+## Week 3 – Data structures, Big-O, and backend thinking
 
-**Goal:**  
-Build an end-to-end fraud detection system with proper MLOps (tracking, serving, CI/CD, monitoring).
+### Saturday
 
-**Datasets / Sources:**
+- Topic: arrays, dynamic arrays, list operations
+- Focus: memory cost and indexing
 
-- Kaggle credit card fraud datasets, e.g.:
-  - [Credit Card Fraud Detection](https://www.kaggle.com/datasets/miadul/credit-card-fraud-detection-dataset)
-  - [Credit Card Fraud 2025](https://www.kaggle.com/datasets/prince7489/credit-card-fraud-2025)
-- Optional:
-  - Synthetic transaction data generators (for extra volume/variety).
+### Sunday
 
-**Core Features:**
+- Topic: hash maps, sets, collisions
+- Focus:
+  - why dictionary lookup is $O(1)$ on average
+- Lab:
+  - index records by ID in memory
 
-- Data pipeline:
-  - Load CSV, perform EDA (class imbalance, feature distributions).
-  - Split into train/validation/test with stratification.
-- Modeling:
-  - Baseline: logistic regression.
-  - Stronger models: Random Forest, XGBoost/LightGBM.
-  - Handle class imbalance (class weights, SMOTE, or similar).
-- Evaluation:
-  - Metrics: ROC-AUC, PR-AUC, precision/recall at specific thresholds.
-  - Choose threshold based on business trade-off (false positives vs false negatives).
-- Serving:
-  - FastAPI service:
-    - Endpoint: `POST /predict` with transaction features.
-    - Returns fraud probability + recommended action.
-- MLOps:
-  - Experiment tracking with MLflow or W&B.
-  - Model registry: register best model.
-  - CI:
-    - GitHub Actions to run tests and linting.
-  - Basic monitoring:
-    - Log predictions, latency.
-    - Simulate drift by injecting synthetic “new” transaction patterns.
+### Monday
 
-**Stretch Goals:**
+- Topic: stacks, queues, linked lists
+- Lab:
+  - simulate an event queue or task queue
 
-- Add:
-  - Batch inference job (e.g., nightly scoring of new transactions).
-  - Simple dashboard (Metabase/Superset/Streamlit) showing:
-    - Fraud rate over time
-    - Model performance metrics
-  - A/B test simulation: compare two models’ decisions on historical data.
+### Tuesday
 
-**Tech Suggestions:**
+- Topic: Big-O analysis
+- Learn:
+  - $O(1)$, $O(log n)$, $O(n)$, $O(n log n)$
+- Lab:
+  - compare list search vs dict lookup in code
 
-- Python, scikit-learn, XGBoost/LightGBM
-- MLflow or W&B for tracking
-- FastAPI for serving
-- Docker + GitHub Actions
-- Optional: Airflow/Dagster for batch jobs
+### Wednesday – Build Day 1
 
-**Evaluation Criteria:**
+- Build a mini in-memory indexing project
+- Example:
+  - search records by ID
+  - group by category
+  - store lookups in a dictionary
 
-- Model:
-  - Has solid ROC-AUC/PR-AUC and justified threshold choice.
-- System:
-  - Is containerized and runnable via `docker compose up` or similar.
-  - Has CI pipeline running tests.
-  - Has basic monitoring/logging.
-- README:
-  - Explains data, modeling choices, metrics, and how to run everything.
+### Thursday – Build Day 2
+
+- Benchmark performance and document results
+- Deliverable:
+  - README with complexity discussion
+
+### Friday
+
+- Rest + recap
 
 ---
 
-## Project Brief 3 – Personal Finance Assistant Agent (Agentic RAG + Tools)
+## Week 4 – Git, venvs, typing, and packaging
 
-**Goal:**  
-Build an agentic assistant that helps users understand their spending and answer questions about their transactions using tools + RAG.
+### Saturday
 
-**Datasets / Sources:**
+- Topic: Git fundamentals
+- Learn:
+  - commit, branch, merge, rebase, stash
+- Lab:
+  - practice branching and merge conflict recovery
 
-- Mock transaction data:
-  - Generate synthetic transactions (date, merchant, category, amount, currency).
-  - Or use open transaction-like datasets from Kaggle.
-- Optional:
-  - Open Banking sandbox APIs (if available in your region) for realistic API integration.
+### Sunday
 
-**Core Features:**
+- Topic: Python environments and package management
+- Learn:
+  - virtualenv/venv
+  - pip
+  - poetry
+- Lab:
+  - create a proper project environment
 
-- Data layer:
-  - Store transactions in a database (Postgres/SQLite).
-  - Provide functions/tools:
-    - `get_transactions(user_id, date_range, category)`
-    - `aggregate_spending(user_id, group_by=category/month)`
-- Agent:
-  - Use an LLM agent framework (LangGraph, AutoGen, or CrewAI).
-  - Capabilities:
-    - Answer questions like:
-      - “How much did I spend on food last month?”
-      - “What are my top 5 merchants by spend?”
-      - “Show me my monthly spending trend.”
-    - Use tools to query DB and compute aggregates.
-- RAG component (optional but recommended):
-  - Ingest personal finance tips / budgeting guidelines.
-  - Allow agent to answer questions like:
-    - “How much should I ideally spend on housing?”
-    - “What’s a good emergency fund size?”
-- API + UI:
-  - REST API (FastAPI/Node) exposing agent endpoint.
-  - Simple chat UI (React or Streamlit) where users ask questions.
+### Monday
 
-**Stretch Goals:**
+- Topic: type hints and Python typing
+- Lab:
+  - add typing to the project code
+
+### Tuesday
+
+- Topic: Pydantic basics
+- Learn:
+  - validation
+  - schema design
+  - structured request models
+
+### Wednesday – Build Day 1
+
+- Project structure:
+  - src layout
+  - requirements.txt or pyproject.toml
+  - tests
+  - docs
+
+### Thursday – Build Day 2
+
+- Finalize the project
+- Create:
+  - .gitignore
+  - README
+  - version tags
+  - clean commit history
+
+### Friday
+
+- Rest + checkpoint
+
+---
+
+# Phase 1: Linux, APIs, SQL, and FastAPI Foundations (Weeks 5–8)
+
+Goal: become comfortable with production backend systems before ML infrastructure.
+
+## Week 5 – Linux + shell workflow
+
+### Saturday
+
+- Topic: Linux filesystem, permissions, users, processes
+- Free resources:
+  - Arabic: free Arabic Linux explainers on YouTube
+  - English: [Linux Journey](https://linuxjourney.com/), [Linux Documentation Project](https://tldp.org/)
+- Lab:
+  - inspect files, permissions, and running services
+
+### Sunday
+
+- Topic: Bash scripting basics
+- Learn:
+  - loops, conditionals, grep, sed, awk
+- Lab:
+  - write a log summarizer script
+
+### Monday
+
+- Topic: process management + services
+- Learn:
+  - `ps`, `top`, `systemd`, backgrounding tasks
+- Lab:
+  - start and monitor a simple daemon-like process
+
+### Tuesday
+
+- Topic: networking basics
+- Learn:
+  - ports, localhost, curl, HTTP basics
+- Lab:
+  - use curl against a local API
+
+### Wednesday – Build Day 1
+
+- Build a small script or CLI that monitors a local machine:
+  - CPU usage
+  - file activity
+  - log alerts
+
+### Thursday – Build Day 2
+
+- Extend it with:
+  - logging
+  - thresholds
+  - periodic scheduling
+  - README
+
+### Friday
+
+- Rest + notes
+
+---
+
+## Week 6 – REST APIs and FastAPI
+
+### Saturday
+
+- Topic: REST API fundamentals
+- Learn:
+  - endpoints, methods, status codes, HTTP semantics
+- Resources:
+  - [MDN HTTP Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP)
+  - Arabic HTTP explainers for quick understanding
+
+### Sunday
+
+- Topic: FastAPI basics
+- Learn:
+  - app creation
+  - routes
+  - request models
+  - responses
+  - validation
+- Lab:
+  - create a mini task API
+
+### Monday
+
+- Topic: SQL fundamentals
+- Learn:
+  - `SELECT`, `WHERE`, `JOIN`, `GROUP BY`, indexes
+- Resources:
+  - PostgreSQL docs, SQLBolt, free SQL practice labs
+
+### Tuesday
+
+- Topic: PostgreSQL + SQLAlchemy basics
+- Lab:
+  - connect FastAPI to PostgreSQL
+- Deliverable:
+  - CRUD API using database storage
+
+### Wednesday – Build Day 1
+
+- Project: build a task management API with FastAPI + PostgreSQL
+- Include:
+  - REST routes
+  - validation
+  - database connection
+  - health endpoint
+
+### Thursday – Build Day 2
 
 - Add:
-  - Multi-turn conversations with memory (user context).
-  - Budget suggestions:
-    - Based on spending patterns, propose category budgets.
-  - Guardrails:
-    - Avoid giving specific investment advice; keep guidance general.
-  - Observability:
-    - Log agent actions, tool calls, latencies.
+  - tests
+  - environment variables
+  - better docs
+  - logging
 
-**Tech Suggestions:**
+### Friday
 
-- Backend: Python + FastAPI
-- Agent: LangGraph or CrewAI
-- DB: Postgres or SQLite
-- Frontend: React or Streamlit
-- Optional: Docker + GitHub Actions for CI
+- Rest + review
 
-**Evaluation Criteria:**
+---
 
-- Agent:
-  - Correctly answers typical spending questions using tools.
-  - Gracefully handles unknown/ambiguous queries.
-- System:
-  - Is containerized and documented.
-  - Has basic logging/observability.
-- README:
-  - Describes architecture, tools, example queries, and limitations.
+## Week 7 – Redis, async Python, and reliability patterns
+
+### Saturday
+
+- Topic: Redis basics
+- Learn:
+  - cache patterns
+  - TTL
+  - invalidation
+  - key-value usage
+- Lab:
+  - cache API responses in Redis
+
+### Sunday
+
+- Topic: async programming in Python
+- Learn:
+  - `async` / `await`
+  - `asyncio`
+  - background tasks
+- Lab:
+  - use async for a simple service or client
+
+### Monday
+
+- Topic: HTTP clients and API integration
+- Learn:
+  - `requests` vs `httpx`
+  - retries and timeouts
+- Lab:
+  - create a client that calls another API reliably
+
+### Tuesday
+
+- Topic: reliability patterns
+- Learn:
+  - retries
+  - timeouts
+  - idempotency
+  - graceful failure
+
+### Wednesday – Build Day 1
+
+- Project: extend the API with Redis cache and async tasks
+
+### Thursday – Build Day 2
+
+- Add:
+  - structured logging
+  - error handling
+  - health checks
+  - metrics endpoint
+
+### Friday
+
+- Rest + recap
+
+---
+
+## Week 8 – Docker fundamentals and containerization
+
+### Saturday
+
+- Topic: Docker basics
+- Learn:
+  - images vs containers
+  - Dockerfiles
+  - Docker architecture
+- Resources:
+  - [Docker Docs](https://docs.docker.com/), official tutorials
+
+### Sunday
+
+- Topic: multi-stage Docker builds
+- Lab:
+  - containerize the FastAPI project
+
+### Monday
+
+- Topic: Docker Compose
+- Lab:
+  - run PostgreSQL + Redis + API together in one stack
+
+### Tuesday
+
+- Topic: Docker debugging and container networking
+- Learn:
+  - logs, ports, environment variables, volumes
+
+### Wednesday – Build Day 1
+
+- Containerize your API service
+- Include:
+  - Dockerfile
+  - docker-compose
+  - env configuration
+  - health check
+
+### Thursday – Build Day 2
+
+- Finalize the local deployment runbook
+- Deliverable:
+  - working Dockerized backend service
+
+### Friday
+
+- Rest + checkpoint
+
+---
+
+# Phase 2: Data, ML Foundations, and Early MLOps (Weeks 9–12)
+
+Goal: understand machine learning basics and connect them to deployment patterns.
+
+## Week 9 – Data science fundamentals
+
+### Saturday
+
+- Topic: NumPy arrays and vector operations
+- Learn:
+  - arrays, broadcasting, shapes, dot product
+- Resources:
+  - NumPy docs, free tutorials
+
+### Sunday
+
+- Topic: Pandas basics
+- Learn:
+  - DataFrame, filtering, grouping, merging
+- Lab:
+  - clean a CSV dataset and compute summary metrics
+
+### Monday
+
+- Topic: statistics basics
+- Learn:
+  - mean, median, variance, standard deviation
+- Lab:
+  - calculate and visualize simple distributions
+
+### Tuesday
+
+- Topic: probability and distributions
+- Learn:
+  - normal distribution, skew, confidence level
+
+### Wednesday – Build Day 1
+
+- Build a local data pipeline project
+- Include:
+  - input ingestion
+  - cleaning logic
+  - summary metrics
+  - output export
+
+### Thursday – Build Day 2
+
+- Add:
+  - validation checks
+  - logging
+  - notebook or script report
+
+### Friday
+
+- Rest
+
+---
+
+## Week 10 – ML foundations: supervised learning
+
+### Saturday
+
+- Topic: ML pipeline basics
+- Learn:
+  - train/test split
+  - preprocessing
+  - feature engineering
+  - model evaluation
+
+### Sunday
+
+- Topic: linear regression
+- Lab:
+  - train and test a linear regression model using scikit-learn
+
+### Monday
+
+- Topic: logistic regression
+- Lab:
+  - binary classification task using a simple dataset
+
+### Tuesday
+
+- Topic: decision trees and random forests
+- Lab:
+  - compare model performance
+
+### Wednesday – Build Day 1
+
+- Build a training pipeline
+- Include:
+  - data prep
+  - model training
+  - evaluation
+  - artifact save
+
+### Thursday – Build Day 2
+
+- Wrap the pipeline in a simple API or service
+- Goal:
+  - understand inference life cycle
+
+### Friday
+
+- Rest + review
+
+---
+
+## Week 11 – Model deployment basics
+
+### Saturday
+
+- Topic: offline vs online inference
+- Learn:
+  - training pipeline vs serving pipeline
+
+### Sunday
+
+- Topic: FastAPI prediction service
+- Lab:
+  - serve a trained model using FastAPI
+
+### Monday
+
+- Topic: request validation in ML APIs
+- Learn:
+  - Pydantic schemas for model input/output
+
+### Tuesday
+
+- Topic: model artifact versioning
+- Learn:
+  - file naming, model paths, minimal registry concepts
+- Lab:
+  - save multiple model versions locally
+
+### Wednesday – Build Day 1
+
+- Build an inference API around a scikit-learn model
+- Include:
+  - request schema
+  - prediction endpoint
+  - example payload
+
+### Thursday – Build Day 2
+
+- Add:
+  - model versioning
+  - Dockerfile
+  - documentation
+  - request logging
+
+### Friday
+
+- Rest + checkpoint
+
+---
+
+## Week 12 – MLflow and local MLOps mini-project
+
+### Saturday
+
+- Topic: MLflow basics
+- Learn:
+  - experiments, parameters, metrics, models, registry
+- Lab:
+  - train and log a model using MLflow
+
+### Sunday
+
+- Topic: model artifact tracking and experiment review
+- Lab:
+  - store artifacts and compare runs
+
+### Monday
+
+- Topic: basic workspace design for MLOps projects
+- Learn:
+  - training code
+  - inference code
+  - versioned artifacts
+
+### Tuesday
+
+- Topic: health checks and observability for ML apps
+- Lab:
+  - add health endpoint and request logs
+
+### Wednesday – Build Day 1
+
+- Project: create a local MLOps mini-project
+- Includes:
+  - training pipeline
+  - MLflow tracking
+  - inference API
+  - Docker container
+
+### Thursday – Build Day 2
+
+- Finalize the project with:
+  - README
+  - architecture diagram
+  - runbook
+  - artifacts
+
+### Friday
+
+- Rest + review + prepare next phase
+
+---
+
+# Phase 3: Cloud, IaC, and Kubernetes (Weeks 13–20)
+
+Goal: become capable of provisioning and deploying services in cloud-native environments.
+
+## Week 13 – AWS foundations
+
+### Saturday
+
+- Topic: AWS core services
+- Learn:
+  - IAM, EC2, VPC, S3, Route53
+- Resources:
+  - AWS Skill Builder free content, AWS documentation
+
+### Sunday
+
+- Topic: IAM and security basics
+- Lab:
+  - create users, roles, policies, and secure permissions
+
+### Monday
+
+- Topic: EC2 basics
+- Lab:
+  - launch an EC2 instance and SSH into it
+
+### Tuesday
+
+- Topic: S3 and artifact storage
+- Learn:
+  - bucket storage, object lifecycle, policy basics
+
+### Wednesday – Build Day 1
+
+- Deploy a simple web or API app on EC2
+- Document server setup and security steps
+
+### Thursday – Build Day 2
+
+- Add:
+  - S3 artifact storage
+  - deployment notes
+  - firewall/security group notes
+
+### Friday
+
+- Rest
+
+---
+
+## Week 14 – Terraform basics
+
+### Saturday
+
+- Topic: Terraform fundamentals
+- Learn:
+  - providers, variables, resources, outputs
+- Resources:
+  - HashiCorp Learn, Terraform docs
+
+### Sunday
+
+- Topic: Terraform state and modules
+- Lab:
+  - provision a small resource set using Terraform
+
+### Monday
+
+- Topic: plan, apply, and destroy lifecycle
+- Learn:
+  - how infrastructure state works
+
+### Tuesday
+
+- Topic: Terraform best practices
+- Learn:
+  - modules
+  - tfvars
+  - environment separation
+
+### Wednesday – Build Day 1
+
+- Project: Terraform for AWS VPC + EC2 + S3
+
+### Thursday – Build Day 2
+
+- Validate:
+  - plan
+  - apply
+  - destroy
+- Goal:
+  - automate resource provisioning
+
+### Friday
+
+- Rest + recap
+
+---
+
+## Week 15 – Kubernetes fundamentals
+
+### Saturday
+
+- Topic: Kubernetes concepts
+- Learn:
+  - pods, deployments, services, ingress
+- Resources:
+  - Kubernetes docs, KodeKloud free labs
+
+### Sunday
+
+- Topic: local k8s setup
+- Lab:
+  - install k3d or Minikube and deploy a simple app
+
+### Monday
+
+- Topic: ConfigMaps, Secrets, volumes
+- Lab:
+  - deploy an app that uses external config
+
+### Tuesday
+
+- Topic: Helm basics
+- Learn:
+  - chart structure, values, templates
+- Lab:
+  - deploy a sample app via Helm
+
+### Wednesday – Build Day 1
+
+- Deploy the FastAPI app to local Kubernetes
+- Include:
+  - Deployment
+  - Service
+  - ConfigMap or Secret
+
+### Thursday – Build Day 2
+
+- Add:
+  - readiness/liveness probes
+  - resource limits
+  - notes on rollout behavior
+
+### Friday
+
+- Rest + review
+
+---
+
+## Week 16 – Kubernetes scaling + system design basics
+
+### Saturday
+
+- Topic: HPA and scaling basics
+- Learn:
+  - CPU metrics, queue length, autoscaling
+- Lab:
+  - simulate traffic to observe scaling
+
+### Sunday
+
+- Topic: readiness and liveness probes
+- Lab:
+  - improve resilience and recovery behavior
+
+### Monday
+
+- Topic: load balancers, proxies, caching basics
+- Learn:
+  - reverse proxy, L4 vs L7, caching strategies
+
+### Tuesday
+
+- Topic: queueing and event-driven design basics
+- Learn:
+  - RabbitMQ, Kafka, and SQS concepts
+
+### Wednesday – Build Day 1
+
+- Deploy a multi-container app in Kubernetes
+- Include:
+  - API service
+  - PostgreSQL
+  - Redis
+
+### Thursday – Build Day 2
+
+- Add:
+  - scaling
+  - notes on service resilience
+  - runbook
+
+### Friday
+
+- Rest + checkpoint
+
+---
+
+## Week 17 – EKS + AWS networking
+
+### Saturday
+
+- Topic: Amazon EKS basics
+- Learn:
+  - cluster architecture
+  - node groups
+  - IAM integration
+
+### Sunday
+
+- Topic: AWS networking foundations
+- Learn:
+  - VPC, subnets, security groups, NAT, routing
+
+### Monday
+
+- Topic: service exposure patterns
+- Learn:
+  - ALB and ingress basics
+
+### Tuesday
+
+- Topic: Terraform + EKS deployment workflow
+- Lab:
+  - create a cluster deployment script
+
+### Wednesday – Build Day 1
+
+- Build a Terraform + EKS deployment project
+
+### Thursday – Build Day 2
+
+- Validate cluster bootstrapping and app deployment
+- Goal:
+  - production-like provisioning flow
+
+### Friday
+
+- Rest
+
+---
+
+## Week 18 – GitHub Actions + monitoring
+
+### Saturday
+
+- Topic: CI/CD with GitHub Actions
+- Learn:
+  - jobs, workflows, secrets, matrix builds
+- Lab:
+  - build a pipeline for Python app or service
+
+### Sunday
+
+- Topic: Prometheus + Grafana basics
+- Learn:
+  - metrics, dashboards, alerting
+- Lab:
+  - expose app metrics and visualize them
+
+### Monday
+
+- Topic: structured logging and observability
+- Learn:
+  - logs, correlation, alerts, operational signals
+
+### Tuesday
+
+- Topic: service reliability basics
+- Learn:
+  - SLIs/SLOs, alert thresholds, incident response
+
+### Wednesday – Build Day 1
+
+- Add CI/CD for your application
+- Include:
+  - tests
+  - lint
+  - Docker build
+  - deploy step
+
+### Thursday – Build Day 2
+
+- Add monitoring dashboard and deployment runbook
+- Goal:
+  - platform-grade operational readiness
+
+### Friday
+
+- Rest + review
+
+---
+
+# Phase 4: MLOps and Model Serving (Weeks 19–24)
+
+Goal: turn your ML projects into deployable, observable, repeatable systems.
+
+## Week 19 – MLflow and experiment tracking
+
+### Saturday
+
+- Topic: MLflow basics
+- Learn:
+  - experiments, parameters, metrics, artifacts
+- Lab:
+  - run a training job and log its results
+
+### Sunday
+
+- Topic: model registry and versioning
+- Lab:
+  - save and register a model version
+
+### Monday
+
+- Topic: DVC basics
+- Learn:
+  - dataset versioning and reproducible training
+
+### Tuesday
+
+- Topic: MLOps pipeline concepts
+- Learn:
+  - training pipeline, evaluation pipeline, serving pipeline
+
+### Wednesday – Build Day 1
+
+- Build an ML pipeline with MLflow tracking
+
+### Thursday – Build Day 2
+
+- Add:
+  - model registry
+  - artifact retention
+  - logs
+
+### Friday
+
+- Rest
+
+---
+
+## Week 20 – Model serving and inference basics
+
+### Saturday
+
+- Topic: serving architecture
+- Learn:
+  - offline vs online inference
+  - batch vs real-time serving
+
+### Sunday
+
+- Topic: FastAPI model API
+- Lab:
+  - host a model behind a production-like API
+
+### Monday
+
+- Topic: concurrency and request handling
+- Learn:
+  - async vs threads, queueing, throughput
+
+### Tuesday
+
+- Topic: performance metrics for inference
+- Learn:
+  - latency, throughput, error rate, model load time
+
+### Wednesday – Build Day 1
+
+- Create a model serving service with:
+  - validation
+  - prediction endpoint
+  - metrics
+  - logs
+
+### Thursday – Build Day 2
+
+- Dockerize it and document the deployment flow
+
+### Friday
+
+- Rest + review
+
+---
+
+## Week 21 – LLM and vLLM basics
+
+### Saturday
+
+- Topic: LLM fundamentals
+- Learn:
+  - tokens, attention, transformers, inference trade-offs
+- Resources:
+  - Hugging Face docs, free transformer explainers, LLM architecture fundamentals
+
+### Sunday
+
+- Topic: vLLM basics
+- Learn:
+  - model serving, batching, memory optimization
+- Lab:
+  - serve a small model locally
+
+### Monday
+
+- Topic: quantization basics
+- Learn:
+  - INT8, FP8, memory trade-offs
+
+### Tuesday
+
+- Topic: API gateway and routing concepts
+- Learn:
+  - model fallback patterns, quotas, endpoint routing
+
+### Wednesday – Build Day 1
+
+- Build a local vLLM service
+
+### Thursday – Build Day 2
+
+- Add:
+  - request logging
+  - token count tracking
+  - basic route handling
+
+### Friday
+
+- Rest
+
+---
+
+## Week 22 – LLM platform architecture and RAG foundations
+
+### Saturday
+
+- Topic: multi-tenant AI gateway design
+- Learn:
+  - routing, fallbacks, quotas, logging, tracing
+
+### Sunday
+
+- Topic: embeddings and vector search basics
+- Learn:
+  - semantic search vs keyword search
+
+### Monday
+
+- Topic: Qdrant basics
+- Lab:
+  - set up a vector database and index sample docs
+
+### Tuesday
+
+- Topic: chunking and document ingestion
+- Learn:
+  - document splitting strategies and metadata
+
+### Wednesday – Build Day 1
+
+- Create a basic retrieval service using embeddings + Qdrant
+
+### Thursday – Build Day 2
+
+- Add:
+  - vector indexing
+  - metadata filtering
+  - sample retrieval responses
+
+### Friday
+
+- Rest + checkpoint
+
+---
+
+## Week 23 – RAG and AI service workflow
+
+### Saturday
+
+- Topic: RAG architecture basics
+- Learn:
+  - ingestion, retrieval, generation, evaluation
+
+### Sunday
+
+- Topic: LangChain / LlamaIndex basics
+- Lab:
+  - connect a document store to a model response generator
+
+### Monday
+
+- Topic: hybrid search
+- Learn:
+  - vector + keyword retrieval patterns
+
+### Tuesday
+
+- Topic: prompt design and context window handling
+- Focus:
+  - better prompts and chunk management
+
+### Wednesday – Build Day 1
+
+- Build a simple RAG answer service
+
+### Thursday – Build Day 2
+
+- Add:
+  - API security
+  - logging
+  - fallback behavior
+  - rate limiting concept
+
+### Friday
+
+- Rest
+
+---
+
+## Week 24 – Platform mini-capstone
+
+### Saturday
+
+- Topic: plan the first full portfolio project
+- Goal:
+  - choose one clear AI platform service to build and deploy
+
+### Sunday
+
+- Topic: architecture design
+- Document:
+  - components
+  - data flow
+  - deployment stack
+  - observability
+
+### Monday
+
+- Topic: define API contracts
+- Include:
+  - requests
+  - responses
+  - validation
+  - auth
+
+### Tuesday
+
+- Topic: final integration setup
+- Include:
+  - model or LLM backend
+  - database or vector store
+  - deployment environment
+
+### Wednesday – Build Day 1
+
+- Build the project foundation
+
+### Thursday – Build Day 2
+
+- Finalize and document the system
+- Goal:
+  - clean capstone portfolio entry
+
+### Friday
+
+- Rest + review
+
+---
+
+# Phase 5: AI Platform Engineering and GenAI Deployment (Weeks 25–32)
+
+Goal: build the skill set needed for production AI and LLM platform roles.
+
+## Week 25 – AI gateway and request handling
+
+### Saturday
+
+- Topic: AI gateway design
+- Learn:
+  - routing, quotas, fallback, token accounting
+
+### Sunday
+
+- Topic: request validation and auth patterns
+- Lab:
+  - secure your AI service with API keys or token checks
+
+### Monday
+
+- Topic: prompt safety and guardrails basics
+- Learn:
+  - unsafe input handling, validation, content boundaries
+
+### Tuesday
+
+- Topic: monitoring for AI systems
+- Learn:
+  - latency, queue time, cost, token throughput, request failure rate
+
+### Wednesday – Build Day 1
+
+- Add a gateway layer for your AI service
+
+### Thursday – Build Day 2
+
+- Add guardrails, request logging, and metrics
+
+### Friday
+
+- Rest
+
+---
+
+## Week 26 – Qdrant + RAG system hardening
+
+### Saturday
+
+- Topic: semantic search and retrieval quality
+- Learn:
+  - embedding quality, metadata, retrieval tuning
+
+### Sunday
+
+- Topic: hybrid search
+- Learn:
+  - vector + keyword search combinations
+
+### Monday
+
+- Topic: chunking strategies and context design
+- Lab:
+  - test different chunk sizes over example docs
+
+### Tuesday
+
+- Topic: evaluation basics for RAG
+- Learn:
+  - relevance, faithfulness, helpfulness trade-offs
+
+### Wednesday – Build Day 1
+
+- Improve the RAG project with hybrid retrieval and metadata filters
+
+### Thursday – Build Day 2
+
+- Add evaluation notes and quality checks
+
+### Friday
+
+- Rest + review
+
+---
+
+## Week 27 – Deployment automation and cloud-level AI service delivery
+
+### Saturday
+
+- Topic: GitHub Actions for AI services
+- Lab:
+  - automate build + test + deploy flow
+
+### Sunday
+
+- Topic: Docker deployment for model services
+- Lab:
+  - ship built service in Docker and run it with Compose
+
+### Monday
+
+- Topic: cloud deployment patterns
+- Learn:
+  - EC2, ECS/EKS, and services architecture decisions
+
+### Tuesday
+
+- Topic: AI service infrastructure decisions
+- Learn:
+  - when to deploy as API, job runner, or inference service
+
+### Wednesday – Build Day 1
+
+- Add deployment automation for your AI service
+
+### Thursday – Build Day 2
+
+- Document a production runbook
+- Goal:
+  - service should be deployable with minimal manual effort
+
+### Friday
+
+- Rest
+
+---
+
+## Week 28 – Observability for AI platforms
+
+### Saturday
+
+- Topic: Prometheus and Grafana for AI systems
+- Learn:
+  - model latency, request count, queue depth, token usage
+
+### Sunday
+
+- Topic: alert thresholds for ML/AI services
+- Lab:
+  - design alerts for errors, latency, and throughput anomalies
+
+### Monday
+
+- Topic: drift and data quality basics
+- Learn:
+  - why AI monitoring is different from classic app monitoring
+
+### Tuesday
+
+- Topic: memory and GPU understanding
+- Learn:
+  - VRAM estimation and batching limits
+
+### Wednesday – Build Day 1
+
+- Add dashboards and alerts to your deployed service
+
+### Thursday – Build Day 2
+
+- Document failure modes and troubleshooting steps
+
+### Friday
+
+- Rest + checkpoint
+
+---
+
+## Week 29 – Fine-tuning and parameter-efficient adaptation
+
+### Saturday
+
+- Topic: PEFT and LoRA basics
+- Learn:
+  - low-rank adaptation and why it matters
+- Resources:
+  - official PEFT docs, Hugging Face blog posts, free explainers
+
+### Sunday
+
+- Topic: QLoRA basics
+- Learn:
+  - low-memory fine-tuning and practical trade-offs
+
+### Monday
+
+- Topic: fine-tuning workflow design
+- Learn:
+  - dataset prep, prompt format, validation loop
+
+### Tuesday
+
+- Topic: evaluation of tuned models
+- Learn:
+  - evaluation metrics and quality checks
+
+### Wednesday – Build Day 1
+
+- Create a small fine-tuning demo project
+
+### Thursday – Build Day 2
+
+- Evaluate output quality and document the workflow
+
+### Friday
+
+- Rest
+
+---
+
+## Week 30 – GenAI platform project sprint
+
+### Saturday
+
+- Topic: platform architecture review
+- Focus:
+  - what makes a production AI platform different from a notebook demo
+
+### Sunday
+
+- Topic: secure environment design
+- Learn:
+  - secrets, ingress, auth, environments
+
+### Monday
+
+- Topic: production deployment plan
+- Document:
+  - deployment architecture
+  - traffic flow
+  - monitoring
+  - rollback strategy
+
+### Tuesday
+
+- Topic: cost and performance optimization
+- Learn:
+  - queueing, request batching, rate limiting, token savings
+
+### Wednesday – Build Day 1
+
+- Build the core GenAI platform service
+
+### Thursday – Build Day 2
+
+- Harden it for deployment and documentation
+
+### Friday
+
+- Rest + review
+
+---
+
+## Week 31 – Workloads and scaling for AI services
+
+### Saturday
+
+- Topic: scaling AI systems under load
+- Learn:
+  - autoscaling, concurrent request handling, queue depth
+
+### Sunday
+
+- Topic: GPU capacity and batching strategy
+- Learn:
+  - fit to model size and memory constraints
+
+### Monday
+
+- Topic: failover and fallback patterns
+- Learn:
+  - fallback models, safe routing, degraded mode
+
+### Tuesday
+
+- Topic: service tuning and optimization
+- Focus:
+  - time to first token, throughput, cost per request
+
+### Wednesday – Build Day 1
+
+- Improve the service under simulated high load
+
+### Thursday – Build Day 2
+
+- Add metrics and tuning notes
+
+### Friday
+
+- Rest
+
+---
+
+## Week 32 – Project hardening and portfolio polish
+
+### Saturday
+
+- Topic: stringing together all platform components
+- Focus:
+  - API, data flow, deployment, monitoring, docs
+
+### Sunday
+
+- Topic: cleanup and architecture diagram creation
+- Deliverable:
+  - polished project docs and diagrams
+
+### Monday
+
+- Topic: quality review
+- Check:
+  - code quality
+  - tests
+  - reproducibility
+  - deployability
+
+### Tuesday
+
+- Topic: final portfolio summarization
+- Write a project summary in job-ready language
+
+### Wednesday – Build Day 1
+
+- Final capstone sprint
+
+### Thursday – Build Day 2
+
+- Finalize repository polish and deployment notes
+
+### Friday
+
+- Rest + checkpoint
+
+---
+
+# Phase 6: Final Portfolio and Job Readiness (Weeks 33–52)
+
+Goal: become interview-ready and turn your projects into strong evidence of platform engineering capability.
+
+## Weeks 33–36 – Portfolio project deepening
+
+Focus projects:
+
+- Project A: fast API + database + Redis + Docker service
+- Project B: ML training + inference + MLflow + deployment service
+- Project C: LLM / RAG service with Qdrant + gateway + monitoring
+- Project D: Terraform + Kubernetes deployment of an app or AI service
+
+### Weekly rhythm
+
+- Saturday: advanced concept study
+- Sunday: deep bench practice
+- Monday: architecture review
+- Tuesday: implementation and bug fixing
+- Wednesday: project sprint
+- Thursday: project sprint
+- Friday: review and notes
+
+---
+
+## Week 33
+
+- Focus: production hardening
+- Tasks:
+  - CI/CD pipeline
+  - logging and testing
+  - health checks
+  - clean environment docs
+
+## Week 34
+
+- Focus: deployment automation
+- Tasks:
+  - Terraform + cloud deployment
+  - Docker Compose and K8s deployment notes
+
+## Week 35
+
+- Focus: monitoring and operations
+- Tasks:
+  - add Prometheus/Grafana
+  - define alert thresholds
+  - create runbook
+
+## Week 36
+
+- Focus: portfolio polish
+- Tasks:
+  - README cleanup
+  - architecture diagrams
+  - screenshots
+  - final project summary
+
+---
+
+## Weeks 37–44 – System design and platform thinking
+
+### Focus topics
+
+- load balancers
+- reverse proxies
+- autoscaling
+- caching layers
+- database design trade-offs
+- queues and workers
+- high availability
+- deployment strategies
+- ML/AI platform trade-offs
+
+### Weekly practice
+
+- Saturday: system design reading
+- Sunday: architecture diagram creation
+- Monday: cloud review
+- Tuesday: platform trade-off review
+- Wednesday: project work
+- Thursday: project work
+- Friday: review and notes
+
+---
+
+## Weeks 45–52 – Final interview prep + job application readiness
+
+### Focus
+
+- behavior interviews
+- technical interviews
+- MLOps/system design interviews
+- cloud interview questions
+- project explanation and storytelling
+
+### Final deliverables
+
+- polished GitHub profile
+- strong README files for all projects
+- architecture diagrams
+- deployment runbooks
+- resume matched to MLOps / AI Platform Engineer job titles
+
+### Interview topics to master
+
+- Docker and containerization
+- Kubernetes basics
+- Terraform and state
+- AWS core services
+- CI/CD pipelines
+- model deployment strategies
+- monitoring and alerting
+- LLM serving architecture
+- RAG architecture
+- AI platform trade-offs and failure modes
+
+---
+
+# Best Free Resource Strategy (Arabic Preferred, Then English)
+
+## Arabic-first preference
+
+Use Arabic resources for:
+
+- Python fundamentals
+- Linux basics
+- Docker and Kubernetes explainers
+- AWS concepts simple breakdowns
+- MLOps concepts explained in simple language
+
+## English resources to prioritize
+
+- [Python Official Tutorial](https://docs.python.org/3/tutorial/)
+- [FastAPI Docs](https://fastapi.tiangolo.com/)
+- [Docker Docs](https://docs.docker.com/)
+- [Kubernetes Docs](https://kubernetes.io/docs/)
+- [AWS Skill Builder](https://skillbuilder.aws/) and AWS Docs
+- [Terraform Learn](https://developer.hashicorp.com/terraform/learn)
+- [Prometheus Docs](https://prometheus.io/docs/)
+- [Grafana Docs](https://grafana.com/docs/)
+- [MLflow Docs](https://mlflow.org/docs/latest/index.html)
+- [Qdrant Docs](https://qdrant.tech/documentation/)
+- [Hugging Face Docs](https://huggingface.co/docs)
+- [vLLM Docs](https://docs.vllm.ai/)
+
+---
+
+# Project Milestones Checklist
+
+- [ ] Python CLI project with validation and logging
+- [ ] FastAPI service with PostgreSQL + Redis + Docker
+- [ ] ML training pipeline with experiment tracking
+- [ ] ML model serving API behind Docker
+- [ ] Terraform deployment for AWS resources
+- [ ] Local Kubernetes deployment of an app
+- [ ] GitHub Actions CI/CD pipeline
+- [ ] Prometheus + Grafana monitoring stack
+- [ ] LLM or generative AI service
+- [ ] Qdrant-based RAG service
+- [ ] Final AI platform portfolio project
+
+---
+
+# Final Goal Checklist
+
+By the end of this plan, you should be able to:
+
+- explain the full lifecycle of a production AI or ML service
+- deploy a service using Docker and cloud infrastructure
+- understand Kubernetes and Terraform at a working level
+- build and track ML experiments using MLflow
+- serve a model or LLM in a production-like way
+- monitor application and model health with dashboards and alerts
+- build an AI platform portfolio that demonstrates real engineering skills
+- comfortably read and contribute to TypeScript, React, React Native, and MERN-based codebases
+
+---
+
+## KodeKloud 100 Days Challenge Integration
+
+These are useful, but they should be treated as boosters, not as the main roadmap.
+
+### 1) KodeKloud 100 Days of DevOps
+
+Best use:
+
+- reinforcement after the Linux + Docker + GitHub Actions + CI/CD phase
+- weekly challenge mode for hands-on practice
+- repeat exercises until they feel second nature
+
+Recommended placement:
+
+- use it mainly during Phase 3 and Phase 4
+- do 2–3 lessons per week instead of trying to finish all 100 days at once
+
+### 2) KodeKloud 100 Days of Cloud
+
+Best use:
+
+- AWS and cloud comfort practice for IAM, networking, compute, and deployment
+- ideal for reinforcing cloud architecture after the Terraform and EKS modules
+
+Recommended placement:
+
+- do this after the AWS + Terraform foundational blocks
+- use it as supplementary cloud practice rather than the core learning source
+
+### 3) KodeKloud 100 Days of MLOps
+
+Best use:
+
+- practical reinforcement for model deployment, experiments, pipelines, and serving workflows
+- ideal after MLflow, Dockerized AI services, and inference service modules
+
+Recommended placement:
+
+- do this during Phase 4 and Phase 5, when you understand the core concepts
+
+### Rule of thumb
+
+- If you feel behind, do the KodeKloud challenge as a lab booster
+- If you feel on track, keep it optional and limit it to 1–2 modules per week
+- Do not let it replace the actual portfolio-building and deployment work
+
+These challenges are excellent for repetition and confidence, but the real job readiness comes from building and deploying projects yourself.
+
+---
+
+## Recommended action for the next step
+
+At this point, the roadmap is structured properly for your goal and includes the modern full-stack layer you wanted. The next best move is to turn this into a practical weekly checklist with exact tasks for each Saturday–Thursday block, while keeping the TypeScript / React / React Native / MERN layer as a support track rather than a distraction.
+
+If you want, I can now convert this roadmap into a tighter execution version with:
+
+1. exact weekly checkboxes for each week
+2. one study task + one lab + one build project per day
+3. a separate modern developer support track that is easier to follow in parallel
