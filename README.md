@@ -1,65 +1,31 @@
 # Learning Portfolio: Data, AI, Engineering & DevOps
 
-This repository documents my hands-on learning across data analytics, generative AI, machine learning, and DevOps. It is a working portfolio of notes, exercises, problem-solving practice, and small projects—not a collection of finished production systems.
+A hands-on learning portfolio of notes, exercises, and small projects. The repository is a work in progress; individual folders vary in completeness.
 
-My current goal is to build strong engineering foundations and apply them to data- and AI-focused work: working with data, building reliable software, and learning how to package and operate it.
+## Start here
 
-## Learning Focus
+- **PostgreSQL:** [Intro to PostgreSQL](PS_SQL/000_Intro_to_Postgres/README.md) for query fundamentals, then [Mastering PostgreSQL](PS_SQL/001_Mastering_Postgres/README.md) for data types, constraints, indexing, and query plans. Exercise files are named `practice_trainings.sql` and `practice_dvdrental.sql`.
+- **Python:** [Python foundations](boot.dev/01-learn-python-for-beginners/README.md) includes daily exercises, notes, and a few tested modules.
+- **Algorithms:** [Data Structures & Algorithms](DSA/README.md) and [LeetCode solutions](leetcode/README.md).
+- **AI:** [Build an AI Agent](boot.dev/08-build-ai-agent/README.md) contains course notes and exercises.
+- **Systems:** [Linux](boot.dev/02-learn-linux/README.md), [Git](boot.dev/04-learn-git/README.md), [Docker](boot.dev/21-learn-docker/README.md), and the [Bash utility lab](projects/system_toolkit/README.md).
+- **Applications:** [Tawheed storefront](projects/tawheed_react_app/README.md), [Moodflix movie browser](projects/moodflix/README.md), and [Node.js file processor](projects/file-processor/README.md).
 
-### Data Analytics
+## Repository map
 
-I am building practical SQL and PostgreSQL skills for querying, cleaning, aggregating, and modeling data. The PostgreSQL work includes exercises using both a training database and the `dvdrental` sample database.
+| Folder                       | Contents                                               |
+| ---------------------------- | ------------------------------------------------------ |
+| `PS_SQL/`                    | PostgreSQL lessons and practice queries                |
+| `DSA/`                       | Data structures, algorithms, and problem solving       |
+| `leetcode/`                  | Coding challenge solutions                             |
+| `boot.dev/`                  | Backend, systems, Docker, and AI-agent course work     |
+| `projects/`                  | Web apps, utilities, and smaller programming exercises |
+| `maths.md`, `ai-ml-journey/` | Supporting mathematics and study planning              |
 
-- [Intro to PostgreSQL](./PS_SQL/000_Intro_to_Postgres/README.md) — querying, filtering, operators, `NULL` handling, aggregation, and `HAVING`.
-- [Mastering PostgreSQL](./PS_SQL/001_Mastering_Postgres/) — data types, constraints, advanced types, and indexing exercises.
-- [SQL practice materials](./PS_SQL/999_trainings/README.md)
+## Tools and languages
 
-### Generative AI & Machine Learning
+Python, SQL, JavaScript, TypeScript, Bash, PostgreSQL, React, Vite, Node.js, Git, and Docker.
 
-I am developing the programming, mathematical, and data foundations needed for AI and machine-learning work. This repository currently includes an AI-agent learning module and foundational work in Python, algorithms, and mathematics; dedicated end-to-end ML projects will be added as that work progresses.
+## Running projects
 
-- [Build an AI Agent](./boot.dev/08-build-ai-agent/README.md)
-- [Python foundations](./boot.dev/01-learn-python-for-beginners/README.md)
-- [Mathematics notes](./maths.md)
-- [Data Structures & Algorithms](./DSA/README.md)
-
-### DevOps & Systems
-
-I am learning the tools and practices that support repeatable software delivery and reliable development environments, with an emphasis on Linux, Git, Docker, HTTP, and shell scripting.
-
-- [Linux](./boot.dev/02-learn-linux/README.md)
-- [Git](./boot.dev/04-learn-git/README.md)
-- [Docker](./boot.dev/21-learn-docker/README.md)
-- [Bash Scripting Utility Lab](./projects/system_toolkit/README.md)
-
-## Supporting Engineering Practice
-
-These areas strengthen the core skills behind my data, AI, and DevOps goals.
-
-- [Backend Developer Path](./boot.dev/README.md) — Python, TypeScript, SQL, HTTP, Docker, and backend architecture.
-- [LeetCode solutions](./leetcode/README.md) — algorithmic problem solving in Python, JavaScript, TypeScript, and SQL.
-- [Personal projects](./projects/) — web applications, scripting utilities, and programming exercises.
-
-## Tools & Technologies
-
-**Languages:** Python, SQL, JavaScript, TypeScript, Bash
-
-**Data:** PostgreSQL
-
-**Engineering & DevOps:** Linux, Git, Docker, HTTP, Node.js
-
-**Frontend projects:** React, Vite, Tailwind CSS
-
-## Repository Structure
-
-```text
-PS_SQL/    PostgreSQL courses, notes, and SQL practice
-DSA/       Data structures and algorithms study material
-leetcode/  Documented coding-challenge solutions
-boot.dev/  Backend, systems, Docker, and AI-agent learning modules
-projects/  Hands-on applications and utilities
-```
-
-## Direction
-
-I am actively expanding this portfolio toward data-analysis workflows, machine-learning projects, generative-AI applications, and containerized deployments. Each addition is intended to show both what I am learning and how I apply it in code.
+Projects have their own dependencies and setup steps. Start with the README in the project folder; some exercises need external services, API credentials, or a local backend. There is no single root-level install or test command.

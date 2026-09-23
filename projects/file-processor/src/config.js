@@ -1,16 +1,8 @@
 const path = require("node:path");
 
 /**
- * Configuration for the file processor.
- * @typedef {Object} FileProcessorConfig
- * @property {string} inputFile - Path to the input file.
- * @property {string} outputFile - Path to the output file.
- * @property {string} processType - Type of processing (e.g., 'uppercase', 'lowercase').
- */
-
-/**
  * Default configuration for the file processor.
- * @type {FileProcessorConfig}
+ * @type {{ inputFile: string, outputFile: string, processType: string }}
  */
 const config = {
   inputFile: path.join(__dirname, "..", "input.txt"),
@@ -18,4 +10,4 @@ const config = {
   processType: process.env.PROCESS_TYPE || "uppercase",
 };
 
-module.export = config;
+module.exports = config;

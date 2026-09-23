@@ -1,16 +1,13 @@
-const fs = require("fs");
+const fs = require("node:fs");
+const path = require("node:path");
+const { Transform } = require("node:stream");
+const { pipeline } = require("node:stream/promises");
 const logger = require("./logger");
 
-/**
- * File processor class for reading, processing, and writing files.
- */
+/** File processor for reading, transforming, and writing text files. */
 class FileProcessor {
   /**
-   * Creates a new FileProcessor instance.
-   * @param {Object} config - Configuration object.
-   * @param {string} config.inputFile - Path to the input file.
-   * @param {string} config.outputFile - Path to the output file.
-   * @param {string} config.processType - Type of processing (e.g., 'uppercase').
+   * @param {{ inputFile: string, outputFile: string, processType: string }} config
    */
   constructor(config) {
     this.inputFile = config.inputFile;
@@ -18,66 +15,40 @@ class FileProcessor {
     this.processType = config.processType;
   }
 
-  /**
-   * Processes the file based on the configuration.
-   * @returns {Promise<void>} Resolves when processing is complete.
-   */
+  /** Process the configured input file and resolve after the output is closed. */
   async processFile() {
+    if (path.resolve(this.inputFile) === path.resolve(this.outputFile)) {
+      throw new Error("Input and output files must be different");
+    }
+
+    const processor = new Transform({
+      transform: (chunk, encoding, callback) => {
+        try {
+          const input = Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk, encoding);
+          const result = this.processData(input);
+          logger.logData(input.length);
+          callback(null, result);
+        } catch (error) {
+          callback(error);
+        }
+      },
+    });
+
+    logger.logStart(this.inputFile);
     try {
-      // Check if input file exists
-      if (!fs.existsSync(this.inputFile)) {
-        throw new Error("Input file does not exist");
-      }
-
-      // Create streams
-      const readStream = fs.createReadStream(this.inputFile, {
-        encoding: "utf8",
-      });
-      const writeStream = fs.createWriteStream(this.outputFile);
-
-      // Log start
-      logger.logStart(this.inputFile);
-
-      // Handle stream data
-      readStream.on("data", (chunk) => {
-        // Convert chunk to buffer and process
-        const buffer = Buffer.from(chunk);
-        const processedData = this.processData(buffer);
-
-        // Write to output stream
-        writeStream.write(processedData);
-
-        // Log data event
-        logger.logData(buffer.length);
-      });
-
-      // Handle stream end
-      readStream.on("end", () => {
-        writeStream.end();
-        logger.logEnd(this.outputFile);
-      });
-
-      // Handle errors
-      readStream.on("error", (err) => logger.logError(err));
-      writeStream.on("error", (err) => logger.logError(err));
-
-      // Return a promise that resolves when the write stream finishes
-      return new Promise((resolve, reject) => {
-        writeStream.on("finish", resolve);
-        writeStream.on("error", reject);
-      });
-    } catch (err) {
-      logger.logError(err);
-      throw err;
+      await pipeline(
+        fs.createReadStream(this.inputFile, { encoding: "utf8" }),
+        processor,
+        fs.createWriteStream(this.outputFile)
+      );
+      logger.logEnd(this.outputFile);
+    } catch (error) {
+      logger.logError(error);
+      throw error;
     }
   }
 
-  /**
-   * Processes the data buffer based on the processType.
-   * @param {Buffer} buffer - The data buffer to process.
-   * @returns {string} The processed data.
-   * @private
-   */
+  /** @param {Buffer} buffer @returns {string} */
   processData(buffer) {
     const data = buffer.toString("utf8");
     switch (this.processType) {
