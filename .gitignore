@@ -51,5 +51,5 @@ skill-using.txt
 
 books.md
 maths.md
-./projects/ns-boilerplate/PROJECT_CONTEXT.md
-projects/ns-boilerplate/PROJECT_CONTEXT.md
+projects/ns-boilerplate/*
+python_projects_learning_roadmap.md
