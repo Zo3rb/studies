@@ -48,7 +48,6 @@ pip-wheel-metadata/
 **/.git/
 .github/skills/*
 skill-using.txt
-
 books.md
 maths.md
 projects/ns-boilerplate/*
