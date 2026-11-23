@@ -34,17 +34,15 @@ Forward-deployed delivery, documentation, and storytelling
 
 | Track | What is active | Where |
 | --- | --- | --- |
-| **Platform foundation** | Linux Mastery course (DevOp Camp ZTM), study period Oct 30 – Nov 15, 2026 | [`Linux/`](./Linux/) |
-| **Coursera roadmap v2** | Phase 1: Linux security/cloud and IBM containers & microservices | [Coursera Roadmap v2](<Coursera-Roadmap v2 (Project-Powered).md>) |
+| **Canonical roadmap** | Goal-gated progression for SWE, AI/ML, platform, and FDE roles | [Canonical Goal-Driven Roadmap](./roadmap_courses.md) |
+| **Platform foundation** | Linux, Git, Bash, and the current DevOp Camp ZTM material | [`Linux/`](./Linux/) |
 | **PostgreSQL** | Mastering PostgreSQL modules and per-lesson practice | [`PS_SQL/`](./PS_SQL/) |
 | **DSA and interviews** | Data structures, patterns, and LeetCode practice | [`DSA/`](./DSA/), [`leetcode/`](./leetcode/) |
 | **Python projects** | Terminal task tracker and gradebook | [`projects/`](./projects/) |
 
 The active execution plan is the
-[Coursera Roadmap v2](<Coursera-Roadmap v2 (Project-Powered).md>): a 37-week,
-six-phase path running from **Nov 2, 2026 to Jul 18, 2027**. It schedules 21 remaining
-courses and grows one flagship AI service project through each phase. Phase 1 runs
-Nov 2 – Dec 6, 2026.
+[Canonical Goal-Driven Roadmap](./roadmap_courses.md). It proceeds through measurable
+gates and does not rely on fixed calendar deadlines.
 
 ## Repository map
 
@@ -61,19 +59,20 @@ Nov 2 – Dec 6, 2026.
 There is no root-level dependency installation, application entry point, or single test
 command. Each folder is self-contained; use the README or run instructions inside it.
 
-## The Coursera path at a glance
+## The goal path at a glance
 
-| Phase | Dates | Focus | Flagship deliverable |
-| --- | --- | --- | --- |
-| 1. Platform foundation | Nov 2 – Dec 6, 2026 | Linux security, containers, microservices | Hardened Linux base and containerized microservices on Kubernetes |
-| 2. Data foundations | Nov 30, 2026 – Feb 7, 2027 | Analytics, statistics, Python | Data analysis and stakeholder brief |
-| 3. Machine learning | Feb 1 – Apr 4, 2027 | Supervised and advanced ML | Trained, evaluated model served as an API |
-| 4. Data and algorithms core | Mar 29 – May 16, 2027 | SQL pipelines, algorithms | SQL-backed pipeline and algorithmic core |
-| 5. Production engineering | May 17 – Jul 11, 2027 | Testing, CI/CD, IaC, security, observability | Production-grade AI platform |
-| 6. Delivery and storytelling | Jul 5 – Jul 18, 2027 | Data storytelling | Forward-deployed delivery and handoff |
+| Gate | Focus | Evidence |
+| --- | --- | --- |
+| Foundation | Python, SQL, Linux, Git, Docker, React/TypeScript | Reproducible CLI/API and testing evidence |
+| SWE gate | API, frontend, database, DSA, deployment | One deployed application and 50 solved problems |
+| Atlas | SWE/SaaS platform | Multi-tenant service with auth, audit, tests, and live demo |
+| Oracle | RAG/agent AI platform | Citations, refusal, tenant isolation, eval gate, and traces |
+| Forge | ML/MLOps | Leakage-safe model, model card, serving, monitoring, rollback |
+| Bedrock | Platform engineering | Reproducible infrastructure, CI/CD, observability, and cleanup |
+| Bridge | Forward-deployed delivery | Discovery, POC, success metrics, handoff, and case study |
 
-Each phase project is expected to leave a README story, architecture diagram,
-tests, a Dockerfile where relevant, a runbook, and a short demo.
+Each project must leave a README story, architecture diagram, tests, runbook,
+ADR trade-offs, measured results, a demo, and a clear role narrative.
 
 ## How the study loop works
 
@@ -142,19 +141,21 @@ roadmap item has been finished.
 - **LeetCode:** 40 Easy and 2 Medium problems with write-ups and screenshots.
 - **Python:** A runnable task tracker and an in-progress gradebook application.
 - **Bandit:** Command-line exercises completed and documented through level 12.
-- **AI/ML projects:** Planned through the Coursera phases; no flagship implementation
-  is committed yet.
+- **AI/ML projects:** No flagship implementation is committed yet.
 
 ## Planning and reference material
 
-- **Active plan:** [Coursera Roadmap v2](<Coursera-Roadmap v2 (Project-Powered).md>)
+- **Active plan:** [Canonical Goal-Driven Roadmap](./roadmap_courses.md)
+- **Study sprint:** [2.5-Hour Foundation Plan](./STUDY_PLAN.md)
+- **Progress dashboard:** [Roadmap state](./ROADMAP_STATE.md)
 - **Alternative and earlier plans:** `AI_ML_CHUNTER.md`, `AI_ML_by_educative.md`,
   `AI_ML_free_roadmap.md`, `28_day_math_for_ml_ai_arabic_roadmap.md`
 - **Reading list:** `books.md`
 - **Study-coach prompts:** `skill-using.txt`
 
-The earlier `boot.dev` Python and backend curriculum and the `ai-ml-journey` plan are
-retired from the active path. Their commits remain in git history.
+The Boot.dev Backend Curriculum is now the primary guided course sequence. The
+roadmap maps its courses and projects to role gates; it does not replace the five
+portfolio mega-projects.
 
 ## Working conventions
 
