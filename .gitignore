@@ -47,16 +47,7 @@ pip-wheel-metadata/
 # Ignore nested Git repositories
 **/.git/
 .github/skills/*
-skill-using.txt
 books.md
-maths.md
-projects/ns-boilerplate/*
-python_projects_learning_roadmap.md
-28_day_math_for_ml_ai_arabic_roadmap.md
-AI_ML_by_educative.md
-AI_ML_free_roadmap.md
-career_logs/*
-AI_ML_CHUNTER.md
-roadmap_courses.md
-ROADMAP_STATE.md
-STUDY_PLAN.md
+LEARNING_RESOURCES.md
+project-learning-roadmap.md
+skills_recommended.md

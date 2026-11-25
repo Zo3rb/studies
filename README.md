@@ -32,17 +32,17 @@ Forward-deployed delivery, documentation, and storytelling
 
 ## Current focus — November 2026
 
+No guided course is active. Full Stack Open was already completed and is skipped;
+Boot.dev is discarded. The next work is the AI engineering flagship: build, measure,
+and document it using the resources in [LEARNING_RESOURCES.md](./LEARNING_RESOURCES.md).
+
 | Track | What is active | Where |
 | --- | --- | --- |
-| **Canonical roadmap** | Goal-gated progression for SWE, AI/ML, platform, and FDE roles | [Canonical Goal-Driven Roadmap](./roadmap_courses.md) |
+| **AI engineering** | Applied LLM, RAG, evals, and agents references | [LEARNING_RESOURCES.md](./LEARNING_RESOURCES.md) |
 | **Platform foundation** | Linux, Git, Bash, and the current DevOp Camp ZTM material | [`Linux/`](./Linux/) |
 | **PostgreSQL** | Mastering PostgreSQL modules and per-lesson practice | [`PS_SQL/`](./PS_SQL/) |
 | **DSA and interviews** | Data structures, patterns, and LeetCode practice | [`DSA/`](./DSA/), [`leetcode/`](./leetcode/) |
 | **Python projects** | Terminal task tracker and gradebook | [`projects/`](./projects/) |
-
-The active execution plan is the
-[Canonical Goal-Driven Roadmap](./roadmap_courses.md). It proceeds through measurable
-gates and does not rely on fixed calendar deadlines.
 
 ## Repository map
 
@@ -145,17 +145,12 @@ roadmap item has been finished.
 
 ## Planning and reference material
 
-- **Active plan:** [Canonical Goal-Driven Roadmap](./roadmap_courses.md)
-- **Study sprint:** [2.5-Hour Foundation Plan](./STUDY_PLAN.md)
-- **Progress dashboard:** [Roadmap state](./ROADMAP_STATE.md)
-- **Alternative and earlier plans:** `AI_ML_CHUNTER.md`, `AI_ML_by_educative.md`,
-  `AI_ML_free_roadmap.md`, `28_day_math_for_ml_ai_arabic_roadmap.md`
+- **Learning resources:** [LEARNING_RESOURCES.md](./LEARNING_RESOURCES.md)
 - **Reading list:** `books.md`
 - **Study-coach prompts:** `skill-using.txt`
 
-The Boot.dev Backend Curriculum is now the primary guided course sequence. The
-roadmap maps its courses and projects to role gates; it does not replace the five
-portfolio mega-projects.
+Full Stack Open was completed previously and is skipped; Boot.dev is no longer used.
+Other study plans were removed. Rebuild the role-gate roadmap from the flagship work.
 
 ## Working conventions
 
@@ -174,6 +169,6 @@ portfolio mega-projects.
 ## Attribution
 
 These notes summarize and practice material from external courses and platforms,
-including Coursera, IBM, DevOp Camp ZTM, Boot.dev, PostgreSQL exercises,
+including Coursera, IBM, DevOp Camp ZTM, PostgreSQL exercises,
 GeeksforGeeks, and OverTheWire. Course names and trademarks belong to their respective
 owners. Solutions and written notes here are personal work unless stated otherwise.
